@@ -1,0 +1,634 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F744EB65231814AD0031E374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F744EB64231814AD0031E374 /* AppDelegate.swift */; };
+		F744EB67231814AD0031E374 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F744EB66231814AD0031E374 /* ViewController.swift */; };
+		F744EB6A231814AD0031E374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F744EB68231814AD0031E374 /* Main.storyboard */; };
+		F744EB6C231814AF0031E374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F744EB6B231814AF0031E374 /* Assets.xcassets */; };
+		F744EB6F231814AF0031E374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F744EB6D231814AF0031E374 /* LaunchScreen.storyboard */; };
+		F744EB7A231814AF0031E374 /* PodlodkaAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F744EB79231814AF0031E374 /* PodlodkaAppTests.swift */; };
+		F744EB85231814AF0031E374 /* PodlodkaAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F744EB84231814AF0031E374 /* PodlodkaAppUITests.swift */; };
+		F744EB9323191DA80031E374 /* SharedCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F744EB9223191DA80031E374 /* SharedCode.framework */; };
+		F763CA3B23241266002D63F4 /* SharedCode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F763CA3A23241266002D63F4 /* SharedCode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F763CA3D23241371002D63F4 /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F763CA3C23241371002D63F4 /* EpisodeTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F744EB76231814AF0031E374 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F744EB59231814AD0031E374 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F744EB60231814AD0031E374;
+			remoteInfo = PodlodkaApp;
+		};
+		F744EB81231814AF0031E374 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F744EB59231814AD0031E374 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F744EB60231814AD0031E374;
+			remoteInfo = PodlodkaApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F744EB9523191DA80031E374 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F763CA3B23241266002D63F4 /* SharedCode.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F744EB61231814AD0031E374 /* PodlodkaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PodlodkaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F744EB64231814AD0031E374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F744EB66231814AD0031E374 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F744EB69231814AD0031E374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F744EB6B231814AF0031E374 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F744EB6E231814AF0031E374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F744EB70231814AF0031E374 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F744EB75231814AF0031E374 /* PodlodkaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PodlodkaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F744EB79231814AF0031E374 /* PodlodkaAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodlodkaAppTests.swift; sourceTree = "<group>"; };
+		F744EB7B231814AF0031E374 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F744EB80231814AF0031E374 /* PodlodkaAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PodlodkaAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F744EB84231814AF0031E374 /* PodlodkaAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodlodkaAppUITests.swift; sourceTree = "<group>"; };
+		F744EB86231814AF0031E374 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F744EB9223191DA80031E374 /* SharedCode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SharedCode.framework; path = "../../AndroidStudioProjects/PodlodkaApp/SharedCode/build/xcode-frameworks/SharedCode.framework"; sourceTree = "<group>"; };
+		F763CA3A23241266002D63F4 /* SharedCode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SharedCode.framework; path = "../SharedCode/build/xcode-frameworks/SharedCode.framework"; sourceTree = "<group>"; };
+		F763CA3C23241371002D63F4 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F744EB5E231814AD0031E374 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F744EB9323191DA80031E374 /* SharedCode.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F744EB72231814AF0031E374 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F744EB7D231814AF0031E374 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F744EB58231814AD0031E374 = {
+			isa = PBXGroup;
+			children = (
+				F744EB9223191DA80031E374 /* SharedCode.framework */,
+				F763CA3A23241266002D63F4 /* SharedCode.framework */,
+				F744EB63231814AD0031E374 /* PodlodkaApp */,
+				F744EB78231814AF0031E374 /* PodlodkaAppTests */,
+				F744EB83231814AF0031E374 /* PodlodkaAppUITests */,
+				F744EB62231814AD0031E374 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F744EB62231814AD0031E374 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F744EB61231814AD0031E374 /* PodlodkaApp.app */,
+				F744EB75231814AF0031E374 /* PodlodkaAppTests.xctest */,
+				F744EB80231814AF0031E374 /* PodlodkaAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F744EB63231814AD0031E374 /* PodlodkaApp */ = {
+			isa = PBXGroup;
+			children = (
+				F744EB64231814AD0031E374 /* AppDelegate.swift */,
+				F744EB66231814AD0031E374 /* ViewController.swift */,
+				F744EB68231814AD0031E374 /* Main.storyboard */,
+				F744EB6B231814AF0031E374 /* Assets.xcassets */,
+				F744EB6D231814AF0031E374 /* LaunchScreen.storyboard */,
+				F744EB70231814AF0031E374 /* Info.plist */,
+				F763CA3C23241371002D63F4 /* EpisodeTableViewCell.swift */,
+			);
+			path = PodlodkaApp;
+			sourceTree = "<group>";
+		};
+		F744EB78231814AF0031E374 /* PodlodkaAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				F744EB79231814AF0031E374 /* PodlodkaAppTests.swift */,
+				F744EB7B231814AF0031E374 /* Info.plist */,
+			);
+			path = PodlodkaAppTests;
+			sourceTree = "<group>";
+		};
+		F744EB83231814AF0031E374 /* PodlodkaAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F744EB84231814AF0031E374 /* PodlodkaAppUITests.swift */,
+				F744EB86231814AF0031E374 /* Info.plist */,
+			);
+			path = PodlodkaAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F744EB60231814AD0031E374 /* PodlodkaApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F744EB89231814AF0031E374 /* Build configuration list for PBXNativeTarget "PodlodkaApp" */;
+			buildPhases = (
+				F744EB9623191DF80031E374 /* ShellScript */,
+				F744EB5D231814AD0031E374 /* Sources */,
+				F744EB5E231814AD0031E374 /* Frameworks */,
+				F744EB5F231814AD0031E374 /* Resources */,
+				F744EB9523191DA80031E374 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PodlodkaApp;
+			productName = PodlodkaApp;
+			productReference = F744EB61231814AD0031E374 /* PodlodkaApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F744EB74231814AF0031E374 /* PodlodkaAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F744EB8C231814AF0031E374 /* Build configuration list for PBXNativeTarget "PodlodkaAppTests" */;
+			buildPhases = (
+				F744EB71231814AF0031E374 /* Sources */,
+				F744EB72231814AF0031E374 /* Frameworks */,
+				F744EB73231814AF0031E374 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F744EB77231814AF0031E374 /* PBXTargetDependency */,
+			);
+			name = PodlodkaAppTests;
+			productName = PodlodkaAppTests;
+			productReference = F744EB75231814AF0031E374 /* PodlodkaAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F744EB7F231814AF0031E374 /* PodlodkaAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F744EB8F231814AF0031E374 /* Build configuration list for PBXNativeTarget "PodlodkaAppUITests" */;
+			buildPhases = (
+				F744EB7C231814AF0031E374 /* Sources */,
+				F744EB7D231814AF0031E374 /* Frameworks */,
+				F744EB7E231814AF0031E374 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F744EB82231814AF0031E374 /* PBXTargetDependency */,
+			);
+			name = PodlodkaAppUITests;
+			productName = PodlodkaAppUITests;
+			productReference = F744EB80231814AF0031E374 /* PodlodkaAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F744EB59231814AD0031E374 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = eetolstoy;
+				TargetAttributes = {
+					F744EB60231814AD0031E374 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					F744EB74231814AF0031E374 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = F744EB60231814AD0031E374;
+					};
+					F744EB7F231814AF0031E374 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = F744EB60231814AD0031E374;
+					};
+				};
+			};
+			buildConfigurationList = F744EB5C231814AD0031E374 /* Build configuration list for PBXProject "PodlodkaApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F744EB58231814AD0031E374;
+			productRefGroup = F744EB62231814AD0031E374 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F744EB60231814AD0031E374 /* PodlodkaApp */,
+				F744EB74231814AF0031E374 /* PodlodkaAppTests */,
+				F744EB7F231814AF0031E374 /* PodlodkaAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F744EB5F231814AD0031E374 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F744EB6F231814AF0031E374 /* LaunchScreen.storyboard in Resources */,
+				F744EB6C231814AF0031E374 /* Assets.xcassets in Resources */,
+				F744EB6A231814AD0031E374 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F744EB73231814AF0031E374 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F744EB7E231814AF0031E374 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F744EB9623191DF80031E374 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"/Users/eetolstoy/AndroidStudioProjects/PodlodkaApp/SharedCode/build/xcode-frameworks\"\n./gradlew :SharedCode:packForXCode -PXCODE_CONFIGURATION=${CONFIGURATION}\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F744EB5D231814AD0031E374 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F763CA3D23241371002D63F4 /* EpisodeTableViewCell.swift in Sources */,
+				F744EB67231814AD0031E374 /* ViewController.swift in Sources */,
+				F744EB65231814AD0031E374 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F744EB71231814AF0031E374 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F744EB7A231814AF0031E374 /* PodlodkaAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F744EB7C231814AF0031E374 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F744EB85231814AF0031E374 /* PodlodkaAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F744EB77231814AF0031E374 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F744EB60231814AD0031E374 /* PodlodkaApp */;
+			targetProxy = F744EB76231814AF0031E374 /* PBXContainerItemProxy */;
+		};
+		F744EB82231814AF0031E374 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F744EB60231814AD0031E374 /* PodlodkaApp */;
+			targetProxy = F744EB81231814AF0031E374 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F744EB68231814AD0031E374 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F744EB69231814AD0031E374 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F744EB6D231814AF0031E374 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F744EB6E231814AF0031E374 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F744EB87231814AF0031E374 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F744EB88231814AF0031E374 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F744EB8A231814AF0031E374 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "/Users/eetolstoy/AndroidStudioProjects/PodlodkaApp/SharedCode/build/xcode-frameworks";
+				INFOPLIST_FILE = PodlodkaApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.podlodka.mpp.app.PodlodkaApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F744EB8B231814AF0031E374 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "/Users/eetolstoy/AndroidStudioProjects/PodlodkaApp/SharedCode/build/xcode-frameworks";
+				INFOPLIST_FILE = PodlodkaApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.podlodka.mpp.app.PodlodkaApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F744EB8D231814AF0031E374 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PodlodkaAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.podlodka.mpp.app.PodlodkaAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PodlodkaApp.app/PodlodkaApp";
+			};
+			name = Debug;
+		};
+		F744EB8E231814AF0031E374 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PodlodkaAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.podlodka.mpp.app.PodlodkaAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PodlodkaApp.app/PodlodkaApp";
+			};
+			name = Release;
+		};
+		F744EB90231814AF0031E374 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PodlodkaAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.podlodka.mpp.app.PodlodkaAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PodlodkaApp;
+			};
+			name = Debug;
+		};
+		F744EB91231814AF0031E374 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PodlodkaAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.podlodka.mpp.app.PodlodkaAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PodlodkaApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F744EB5C231814AD0031E374 /* Build configuration list for PBXProject "PodlodkaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F744EB87231814AF0031E374 /* Debug */,
+				F744EB88231814AF0031E374 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F744EB89231814AF0031E374 /* Build configuration list for PBXNativeTarget "PodlodkaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F744EB8A231814AF0031E374 /* Debug */,
+				F744EB8B231814AF0031E374 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F744EB8C231814AF0031E374 /* Build configuration list for PBXNativeTarget "PodlodkaAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F744EB8D231814AF0031E374 /* Debug */,
+				F744EB8E231814AF0031E374 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F744EB8F231814AF0031E374 /* Build configuration list for PBXNativeTarget "PodlodkaAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F744EB90231814AF0031E374 /* Debug */,
+				F744EB91231814AF0031E374 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F744EB59231814AD0031E374 /* Project object */;
+}

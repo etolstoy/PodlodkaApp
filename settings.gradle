@@ -1,0 +1,4 @@
+include ':app'
+rootProject.name='Podlodka'
+include ':SharedCode'
+enableFeaturePreview('GRADLE_METADATA')

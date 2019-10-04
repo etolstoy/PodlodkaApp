@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "547707143990",
+    "firebase_url": "https://podlodka-4aa03.firebaseio.com",
+    "project_id": "podlodka-4aa03",
+    "storage_bucket": "podlodka-4aa03.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:547707143990:android:0fa27644f6b29893859597",
+        "android_client_info": {
+          "package_name": "ru.podlodka.mpp.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "547707143990-h8c0j4coi67e827sph1i1otkqlqaufjq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.podlodka.mpp.app",
+            "certificate_hash": "a6c5d492f014026867b6692d04cdad83f3e52186"
+          }
+        },
+        {
+          "client_id": "547707143990-2lsma0jr9v5ogh5hv8vtuflgp357bqnf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDA8WAoYZPGE0Xr3-5sc67R7mcX9jrfZtk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "547707143990-2lsma0jr9v5ogh5hv8vtuflgp357bqnf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
