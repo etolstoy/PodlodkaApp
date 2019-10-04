@@ -8,7 +8,8 @@ It's a mobile app for [Podlodka Podcast](podlodka.io), entirely written using Ko
 - **Backend** - Spring backend
 - **SharedCode** - shared business logic for both apps
 
-## Plans
+## Roadmap
+- [x] Hello world apps
 - [ ] List of all previous episodes
 - [ ] Schedule of future episodes
 - [ ] Voting for next topics
