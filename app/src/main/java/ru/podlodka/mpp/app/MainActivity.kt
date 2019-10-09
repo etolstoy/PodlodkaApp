@@ -1,25 +1,36 @@
 package ru.podlodka.mpp.app
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.activity_main.*
 import podlodka.module.episodeList.EpisodeListViewModel
 import podlodka.mpp.model.Episode
-import podlodka.mpp.service.EpisodeService
-import kotlinx.coroutines.*
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var linearLayoutManager: LinearLayoutManager
+    private lateinit var adapter: EpisodeViewAdapter
+    var episodes = arrayListOf<Episode>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        linearLayoutManager = LinearLayoutManager(this)
+        recyclerView.layoutManager = linearLayoutManager
+
+        adapter = EpisodeViewAdapter(episodes)
+        recyclerView.adapter = adapter
+
         val viewModel = EpisodeListViewModel()
 
         viewModel.getEpisodes {
-            for (episode in it) {
-                println(episode.name)
+            runOnUiThread {
+                episodes.addAll(it)
+                adapter.notifyDataSetChanged()
             }
+
         }
 
     }
