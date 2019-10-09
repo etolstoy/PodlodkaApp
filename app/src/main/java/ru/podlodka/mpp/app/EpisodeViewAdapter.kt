@@ -43,7 +43,10 @@ class EpisodeViewAdapter(private val episodes: List<Episode>) :
 
         fun bindEpisode(episode: Episode) {
             this.episode = episode
+            val guest = episode.guests?.first()
             view.episodeName.text = episode.name
+            view.episodeGuest.text = "${guest?.name} (${guest?.company})"
+            view.episodeNumber.text = "Выпуск #${episode.number}"
         }
     }
 }
