@@ -20,6 +20,9 @@ It's a mobile app for [Podlodka Podcast](podlodka.io), entirely written using Ko
 - [ ] Unique possibility to pay money directly
 - [ ] Clicker game
 
+## Data Scheme
+![data scheme](data_scheme.jpg)
+
 ## Guides
 ### Updating backend
 Local:
