@@ -10,6 +10,7 @@
 		3CB2746323474A1500B47F1A /* SharedCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F763CA3A23241266002D63F4 /* SharedCode.framework */; };
 		3CCF1B6023CDAA3A00EDB7D9 /* ShowEpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF1B5E23CDAA3A00EDB7D9 /* ShowEpisodeViewController.swift */; };
 		3CCF1B6123CDAA3A00EDB7D9 /* ShowEpisodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CCF1B5F23CDAA3A00EDB7D9 /* ShowEpisodeViewController.xib */; };
+		3CCF1B6323CDB48900EDB7D9 /* AppColors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CCF1B6223CDB48900EDB7D9 /* AppColors.xcassets */; };
 		F744EB65231814AD0031E374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F744EB64231814AD0031E374 /* AppDelegate.swift */; };
 		F744EB67231814AD0031E374 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F744EB66231814AD0031E374 /* ViewController.swift */; };
 		F744EB6A231814AD0031E374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F744EB68231814AD0031E374 /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 		3CB2746023474A0100B47F1A /* PodlodkaApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = PodlodkaApp.xcodeproj; sourceTree = "<group>"; };
 		3CCF1B5E23CDAA3A00EDB7D9 /* ShowEpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowEpisodeViewController.swift; sourceTree = "<group>"; };
 		3CCF1B5F23CDAA3A00EDB7D9 /* ShowEpisodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowEpisodeViewController.xib; sourceTree = "<group>"; };
+		3CCF1B6223CDB48900EDB7D9 /* AppColors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppColors.xcassets; sourceTree = "<group>"; };
 		F744EB61231814AD0031E374 /* PodlodkaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PodlodkaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F744EB64231814AD0031E374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F744EB66231814AD0031E374 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				F744EB66231814AD0031E374 /* ViewController.swift */,
 				F744EB68231814AD0031E374 /* Main.storyboard */,
 				F744EB6B231814AF0031E374 /* Assets.xcassets */,
+				3CCF1B6223CDB48900EDB7D9 /* AppColors.xcassets */,
 				F744EB6D231814AF0031E374 /* LaunchScreen.storyboard */,
 				F744EB70231814AF0031E374 /* Info.plist */,
 				F763CA3C23241371002D63F4 /* EpisodeTableViewCell.swift */,
@@ -291,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F744EB6F231814AF0031E374 /* LaunchScreen.storyboard in Resources */,
+				3CCF1B6323CDB48900EDB7D9 /* AppColors.xcassets in Resources */,
 				F744EB6C231814AF0031E374 /* Assets.xcassets in Resources */,
 				F744EB6A231814AD0031E374 /* Main.storyboard in Resources */,
 				3CCF1B6123CDAA3A00EDB7D9 /* ShowEpisodeViewController.xib in Resources */,

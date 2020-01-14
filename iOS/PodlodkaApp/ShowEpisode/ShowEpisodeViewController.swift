@@ -30,27 +30,18 @@ class ShowEpisodeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.guestImageView.layer.masksToBounds = true
-        self.guestImageView.layer.cornerRadius = self.guestImageView.bounds.width / 2
-        
-        let color = UIColor(red: 252/255, green: 190/255, blue: 90/255, alpha: 1).cgColor
-        self.guestImageView.layer.borderColor = color
-        self.guestImageView.layer.borderWidth = 4
-        
-        
-        self.episodeNameLabel.text = episode.name
-        self.guestNameLabel.text = episode.guests?.first?.name
+        setupContent()
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupContent() {        
+        guestImageView.layer.masksToBounds = true
+        guestImageView.layer.cornerRadius = self.guestImageView.bounds.width / 2
+        
+        guestImageView.layer.borderColor = UIColor.init(named: "darkYellow")?.cgColor
+        guestImageView.layer.borderWidth = 4
+        
+        episodeNameLabel.text = episode.name
+        guestNameLabel.text = episode.guests?.first?.name
     }
-    */
 
 }
