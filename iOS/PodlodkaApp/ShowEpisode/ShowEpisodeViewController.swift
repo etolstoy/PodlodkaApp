@@ -13,6 +13,10 @@ class ShowEpisodeViewController: UIViewController {
     
     var episode: Episode
     
+    @IBOutlet weak var guestImageView: UIImageView!
+    @IBOutlet weak var episodeNameLabel: UILabel!
+    @IBOutlet weak var guestNameLabel: UILabel!
+    
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?, episode: Episode) {
         self.episode = episode
         
@@ -26,7 +30,11 @@ class ShowEpisodeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.guestImageView.layer.masksToBounds = true
+        self.guestImageView.layer.cornerRadius = self.guestImageView.bounds.width / 2
+        
+        self.episodeNameLabel.text = episode.name
+        self.guestNameLabel.text = episode.guests?.first?.name
     }
 
 

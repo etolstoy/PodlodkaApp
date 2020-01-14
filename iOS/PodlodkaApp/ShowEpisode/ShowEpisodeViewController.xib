@@ -1,22 +1,72 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowEpisodeViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowEpisodeViewController" customModule="PodlodkaApp" customModuleProvider="target">
             <connections>
+                <outlet property="episodeNameLabel" destination="fB1-A1-knX" id="iVh-dY-9Qg"/>
+                <outlet property="guestImageView" destination="utD-rF-PaV" id="OBh-qM-E5M"/>
+                <outlet property="guestNameLabel" destination="H5L-hP-H9d" id="kT4-6r-p5q"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AII-WQ-PKs">
+                    <rect key="frame" x="185.5" y="83" width="43" height="4"/>
+                    <color key="backgroundColor" red="0.16470588235294117" green="0.17254901960784313" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="4" id="BZM-d4-DJR"/>
+                        <constraint firstAttribute="width" constant="43" id="Swv-FW-Iz5"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aksenov" translatesAutoresizingMaskIntoConstraints="NO" id="utD-rF-PaV">
+                    <rect key="frame" x="142" y="115" width="130" height="130"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="130" id="Pui-Dd-BUZ"/>
+                        <constraint firstAttribute="width" constant="130" id="t1C-sm-Ipw"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fB1-A1-knX">
+                    <rect key="frame" x="126.5" y="273" width="161" height="29"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guest Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5L-hP-H9d">
+                    <rect key="frame" x="159.5" y="314" width="95" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="utD-rF-PaV" firstAttribute="top" secondItem="AII-WQ-PKs" secondAttribute="bottom" constant="28" id="CAb-2t-9qR"/>
+                <constraint firstItem="H5L-hP-H9d" firstAttribute="top" secondItem="fB1-A1-knX" secondAttribute="bottom" constant="12" id="Kh8-gy-rFA"/>
+                <constraint firstItem="AII-WQ-PKs" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="RlK-68-jPL"/>
+                <constraint firstItem="AII-WQ-PKs" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="39" id="VcD-Aa-lVb"/>
+                <constraint firstItem="utD-rF-PaV" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="dfW-AX-SN8"/>
+                <constraint firstItem="H5L-hP-H9d" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="dkJ-m1-K82"/>
+                <constraint firstItem="fB1-A1-knX" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="jpU-0c-r8A"/>
+                <constraint firstItem="fB1-A1-knX" firstAttribute="top" secondItem="utD-rF-PaV" secondAttribute="bottom" constant="28" id="mP1-dx-cfc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fB1-A1-knX" secondAttribute="trailing" constant="30" id="nfj-7F-krk"/>
+                <constraint firstItem="fB1-A1-knX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="yxb-z3-Zdm"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="153"/>
         </view>
     </objects>
+    <resources>
+        <image name="aksenov" width="302" height="302"/>
+    </resources>
 </document>

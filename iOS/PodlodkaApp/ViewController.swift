@@ -45,7 +45,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let showEpisodeViewController = ShowEpisodeViewController(nibName: "ShowEpisodeViewController", bundle: nil, episode: self.episodes[indexPath.row])
 
-        self.navigationController?.pushViewController(showEpisodeViewController, animated: true)
+        self.navigationController?.showDetailViewController(showEpisodeViewController, sender: self)
     }
     
 }
