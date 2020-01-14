@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3CB2746323474A1500B47F1A /* SharedCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F763CA3A23241266002D63F4 /* SharedCode.framework */; };
+		3CCF1B6023CDAA3A00EDB7D9 /* ShowEpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF1B5E23CDAA3A00EDB7D9 /* ShowEpisodeViewController.swift */; };
+		3CCF1B6123CDAA3A00EDB7D9 /* ShowEpisodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CCF1B5F23CDAA3A00EDB7D9 /* ShowEpisodeViewController.xib */; };
 		F744EB65231814AD0031E374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F744EB64231814AD0031E374 /* AppDelegate.swift */; };
 		F744EB67231814AD0031E374 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F744EB66231814AD0031E374 /* ViewController.swift */; };
 		F744EB6A231814AD0031E374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F744EB68231814AD0031E374 /* Main.storyboard */; };
@@ -52,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		3CB2746023474A0100B47F1A /* PodlodkaApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = PodlodkaApp.xcodeproj; sourceTree = "<group>"; };
+		3CCF1B5E23CDAA3A00EDB7D9 /* ShowEpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowEpisodeViewController.swift; sourceTree = "<group>"; };
+		3CCF1B5F23CDAA3A00EDB7D9 /* ShowEpisodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowEpisodeViewController.xib; sourceTree = "<group>"; };
 		F744EB61231814AD0031E374 /* PodlodkaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PodlodkaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F744EB64231814AD0031E374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F744EB66231814AD0031E374 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +113,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		3CCF1B5B23CDAA2100EDB7D9 /* ShowEpisode */ = {
+			isa = PBXGroup;
+			children = (
+				3CCF1B5E23CDAA3A00EDB7D9 /* ShowEpisodeViewController.swift */,
+				3CCF1B5F23CDAA3A00EDB7D9 /* ShowEpisodeViewController.xib */,
+			);
+			path = ShowEpisode;
+			sourceTree = "<group>";
+		};
 		F744EB58231814AD0031E374 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +148,7 @@
 		F744EB63231814AD0031E374 /* PodlodkaApp */ = {
 			isa = PBXGroup;
 			children = (
+				3CCF1B5B23CDAA2100EDB7D9 /* ShowEpisode */,
 				F744EB64231814AD0031E374 /* AppDelegate.swift */,
 				F744EB66231814AD0031E374 /* ViewController.swift */,
 				F744EB68231814AD0031E374 /* Main.storyboard */,
@@ -279,6 +293,7 @@
 				F744EB6F231814AF0031E374 /* LaunchScreen.storyboard in Resources */,
 				F744EB6C231814AF0031E374 /* Assets.xcassets in Resources */,
 				F744EB6A231814AD0031E374 /* Main.storyboard in Resources */,
+				3CCF1B6123CDAA3A00EDB7D9 /* ShowEpisodeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +341,7 @@
 				F763CA3D23241371002D63F4 /* EpisodeTableViewCell.swift in Sources */,
 				F744EB67231814AD0031E374 /* ViewController.swift in Sources */,
 				F744EB65231814AD0031E374 /* AppDelegate.swift in Sources */,
+				3CCF1B6023CDAA3A00EDB7D9 /* ShowEpisodeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
