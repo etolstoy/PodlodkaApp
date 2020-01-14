@@ -9,7 +9,9 @@
 import UIKit
 import SharedCode
 
-class ViewController: UIViewController, UITableViewDataSource {
+
+
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var episodesTableView: UITableView!
     
@@ -19,6 +21,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.episodesTableView.dataSource = self
+        self.episodesTableView.delegate = self
         self.episodes = []
 
         let viewModel = EpisodeListViewModel.init()
@@ -38,4 +41,11 @@ class ViewController: UIViewController, UITableViewDataSource {
         cell.numberLabel?.text = "Podlodka #\(self.episodes[indexPath.row].number)"
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let showEpisodeViewController = ShowEpisodeViewController(nibName: "ShowEpisodeViewController", bundle: nil, episode: self.episodes[indexPath.row])
+
+        self.navigationController?.showDetailViewController(showEpisodeViewController, sender: self)
+    }
+    
 }

@@ -1,8 +1,7 @@
 package podlodka.mpp.model
 
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import podlodka.mpp.model.Link
-import podlodka.mpp.model.Person
 
 @Serializable
 data class Episode(
@@ -11,7 +10,8 @@ data class Episode(
     val name: String,
     val guests: List<Person>?,
     val hosts: List<Person>,
-    val description: String,
+    @SerialName("description")
+    val desc: String,
     val links: List<Link>,
     val src: String
 )
