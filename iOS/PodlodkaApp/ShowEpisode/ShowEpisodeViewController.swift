@@ -16,6 +16,7 @@ class ShowEpisodeViewController: UIViewController {
     @IBOutlet weak var guestImageView: UIImageView!
     @IBOutlet weak var episodeNameLabel: UILabel!
     @IBOutlet weak var guestNameLabel: UILabel!
+    @IBOutlet weak var episodeDescriptionLabel: UILabel!
     
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?, episode: Episode) {
         self.episode = episode
@@ -42,6 +43,8 @@ class ShowEpisodeViewController: UIViewController {
         
         episodeNameLabel.text = episode.name
         guestNameLabel.text = episode.guests?.first?.name
+        
+        episodeDescriptionLabel.text = episode.desc 
     }
 
 }

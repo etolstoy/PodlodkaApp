@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowEpisodeViewController" customModule="PodlodkaApp" customModuleProvider="target">
             <connections>
+                <outlet property="episodeDescriptionLabel" destination="7Fp-5n-LZ0" id="VjR-x0-fAd"/>
                 <outlet property="episodeNameLabel" destination="fB1-A1-knX" id="iVh-dY-9Qg"/>
                 <outlet property="guestImageView" destination="utD-rF-PaV" id="OBh-qM-E5M"/>
                 <outlet property="guestNameLabel" destination="H5L-hP-H9d" id="kT4-6r-p5q"/>
@@ -49,22 +50,31 @@
                     <color key="textColor" name="textBlack"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Description" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Fp-5n-LZ0">
+                    <rect key="frame" x="18" y="375" width="364" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" name="textBlack"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="7Fp-5n-LZ0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="18" id="99J-Yk-BdB"/>
                 <constraint firstItem="utD-rF-PaV" firstAttribute="top" secondItem="AII-WQ-PKs" secondAttribute="bottom" constant="28" id="CAb-2t-9qR"/>
                 <constraint firstItem="H5L-hP-H9d" firstAttribute="top" secondItem="fB1-A1-knX" secondAttribute="bottom" constant="12" id="Kh8-gy-rFA"/>
                 <constraint firstItem="AII-WQ-PKs" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="RlK-68-jPL"/>
                 <constraint firstItem="AII-WQ-PKs" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="39" id="VcD-Aa-lVb"/>
+                <constraint firstItem="7Fp-5n-LZ0" firstAttribute="top" secondItem="H5L-hP-H9d" secondAttribute="bottom" constant="40" id="ZXy-gd-jKR"/>
                 <constraint firstItem="utD-rF-PaV" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="dfW-AX-SN8"/>
                 <constraint firstItem="H5L-hP-H9d" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="dkJ-m1-K82"/>
                 <constraint firstItem="fB1-A1-knX" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="jpU-0c-r8A"/>
                 <constraint firstItem="fB1-A1-knX" firstAttribute="top" secondItem="utD-rF-PaV" secondAttribute="bottom" constant="28" id="mP1-dx-cfc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fB1-A1-knX" secondAttribute="trailing" constant="30" id="nfj-7F-krk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7Fp-5n-LZ0" secondAttribute="trailing" constant="32" id="xd1-Sn-W6J"/>
                 <constraint firstItem="fB1-A1-knX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="yxb-z3-Zdm"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="153"/>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </view>
     </objects>
     <resources>
