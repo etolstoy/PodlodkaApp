@@ -33,6 +33,11 @@ class ShowEpisodeViewController: UIViewController {
         self.guestImageView.layer.masksToBounds = true
         self.guestImageView.layer.cornerRadius = self.guestImageView.bounds.width / 2
         
+        let color = UIColor(red: 252/255, green: 190/255, blue: 90/255, alpha: 1).cgColor
+        self.guestImageView.layer.borderColor = color
+        self.guestImageView.layer.borderWidth = 4
+        
+        
         self.episodeNameLabel.text = episode.name
         self.guestNameLabel.text = episode.guests?.first?.name
     }
