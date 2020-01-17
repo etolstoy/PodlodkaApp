@@ -18,11 +18,15 @@ class MockDataService(val showEpisodeRepository: ShowEpisodeRepository) {
                     id = generateRandomString(),
                     name = generateEpisodeName(),
                     number = i,
-                    description = generateRandomString(),
+                    created = 1576571350,
+                    length = 6372,
+                    desc = generateRandomString(),
                     hosts = generateHosts(),
                     guests = guests,
                     links = generateLinks(),
-                    src = "https://soundcloud.com/podlodka/podlodka-126-osoznannost"
+                    src = "https://soundcloud.com/podlodka/podlodka-126-osoznannost",
+                    categories = emptyList(),
+                    selections = emptyList()
             )
             showEpisodeRepository.insert(episode)
         }
@@ -34,8 +38,13 @@ class MockDataService(val showEpisodeRepository: ShowEpisodeRepository) {
                 generateRandomString(),
                 generatePersonName(),
                 generateRandomString(),
-                generateCompany()
+                generateCompany(),
+                generatePhoto()
         )
+    }
+
+    private fun generatePhoto(): String {
+        return "https://pbs.twimg.com/profile_images/1189904323767078913/jO5X2gDG_400x400.jpg"
     }
 
     fun generateRandomString(): String {
@@ -84,25 +93,29 @@ class MockDataService(val showEpisodeRepository: ShowEpisodeRepository) {
                     generateRandomString(),
                     "Егор Толстой",
                     generateRandomString(),
-                    "Авито"
+                    "Авито",
+                    "https://pbs.twimg.com/profile_images/1189904323767078913/jO5X2gDG_400x400.jpg"
             ),
             Person(
                     generateRandomString(),
                     "Стас Цыганов",
                     generateRandomString(),
-                    "Туту"
+                    "Туту",
+                    "https://pbs.twimg.com/profile_images/1189904323767078913/jO5X2gDG_400x400.jpg"
             ),
             Person(
                     generateRandomString(),
                     "Катя Петрова",
                     generateRandomString(),
-                    "Авито"
+                    "Авито",
+                    "https://pbs.twimg.com/profile_images/1189904323767078913/jO5X2gDG_400x400.jpg"
             ),
             Person(
                     generateRandomString(),
                     "Евгений Кателла",
                     generateRandomString(),
-                    "Яндекс"
+                    "Яндекс",
+                    "https://pbs.twimg.com/profile_images/1189904323767078913/jO5X2gDG_400x400.jpg"
             )
     )
 }
