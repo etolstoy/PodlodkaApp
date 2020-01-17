@@ -50,7 +50,7 @@ class ShowEpisodeViewController: UIViewController, UITableViewDataSource {
         episodeNameLabel.text = episode.name
         guestNameLabel.text = episode.guests?.first?.name
         
-        episodeDescriptionLabel.text = episode.desc
+        episodeDescriptionLabel.text = episode.desc + episode.desc
         
         categoryView.layer.masksToBounds = true
         categoryView.layer.cornerRadius = 8.0
