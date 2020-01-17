@@ -10,7 +10,10 @@ import ru.podlodka.backend.models.Category
 import ru.podlodka.backend.service.CategoryService
 import java.util.logging.Logger
 
+const val CATEGORY_PATH = "/category"
+
 @RestController
+@RequestMapping(value = [CATEGORY_PATH])
 class CategoryController(val categoryService: CategoryService){
 
     val logger = Logger.getLogger(CategoryService::class.java.canonicalName);
@@ -22,7 +25,7 @@ class CategoryController(val categoryService: CategoryService){
         return categoryMap;
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("{id}")
     fun getCategoryDetail(@PathVariable("id") id: String): ResponseEntity<Category> {
 
         val category = categoryService.getCategoryById(id)

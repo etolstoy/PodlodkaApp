@@ -10,19 +10,22 @@ import ru.podlodka.backend.models.Selection
 import ru.podlodka.backend.service.SelectionService
 import java.util.logging.Logger
 
+const val SELECTION_PATH = "/selection"
+
 @RestController
+@RequestMapping(value = [SELECTION_PATH])
 class SelectionController(val selectionService: SelectionService){
 
     val logger = Logger.getLogger(SelectionService::class.java.canonicalName);
 
     @GetMapping
-    fun getAllSelections(): MutableMap<String, Collection<Selection>> {
+    fun getSelections(): MutableMap<String, Collection<Selection>> {
         val selectionMap = mutableMapOf<String, Collection<Selection>>();
         selectionMap["selections"] = selectionService.getAllSelections();
         return selectionMap;
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("{id}")
     fun getSelectionDetail(@PathVariable("id") id: String): ResponseEntity<Selection> {
 
         val selection = selectionService.getSelectionById(id)

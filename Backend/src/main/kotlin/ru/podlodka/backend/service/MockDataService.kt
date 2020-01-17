@@ -45,11 +45,12 @@ class MockDataService(val showEpisodeRepository: ShowEpisodeRepository,
                     id = generateRandomString(),
                     name = categoryNames[i],
                     emoji = categoryEmojis[i],
-                    episodes = episodes.slice(5*i..5*i+4)
+                    episodes = emptyList()
+                    //episodes = episodes.slice(5*i..5*i+4)
             )
-            for (episode in episodes.slice(5*i..5*i+4)) {
-                episode.categories += category
-            }
+//            for (episode in episodes.slice(5*i..5*i+4)) {
+//                episode.categories += category
+//            }
 
             categoryRepository.insert(category)
         }
@@ -61,11 +62,12 @@ class MockDataService(val showEpisodeRepository: ShowEpisodeRepository,
                     id = generateRandomString(),
                     name = selectionNames[i],
                     imageUrl = selectionCovers[i],
-                    episodes = episodes.slice(5*i..5*i+4)
+                    episodes = emptyList()
+                    //episodes = episodes.slice(5*i..5*i+4)
             )
-            for (episode in episodes.slice(5*i..5*i+4)) {
-                episode.selections += selection
-            }
+//            for (episode in episodes.slice(5*i..5*i+4)) {
+//                episode.selections += selection
+//            }
 
             selectionRepository.insert(selection)
         }
