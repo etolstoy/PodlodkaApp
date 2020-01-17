@@ -1,10 +1,20 @@
 package ru.podlodka.backend.service
 
+import org.springframework.context.ApplicationContext
+import org.springframework.context.annotation.AnnotationConfigApplicationContext
+import org.springframework.data.mongodb.core.MongoOperations
+import org.springframework.data.mongodb.core.query.Criteria
+import org.springframework.data.mongodb.core.query.Query
+import org.springframework.data.mongodb.core.query.Update
+import org.springframework.data.mongodb.core.query.isEqualTo
 import org.springframework.stereotype.Service
 import ru.podlodka.backend.models.*
 import ru.podlodka.backend.repositories.CategoryRepository
 import ru.podlodka.backend.repositories.SelectionRepository
 import ru.podlodka.backend.repositories.ShowEpisodeRepository
+import java.lang.Math.floor
+import java.util.*
+
 
 @Service
 class MockDataService(val showEpisodeRepository: ShowEpisodeRepository,
@@ -17,13 +27,13 @@ class MockDataService(val showEpisodeRepository: ShowEpisodeRepository,
         selectionRepository.deleteAll()
 
         val episodes = mutableListOf<ShowEpisode>()
-        for (i in 1..20) {
+        for (i in 0..19) {
             val guests = listOf<Person>(generatePerson())
 
             val episode = ShowEpisode(
-                    id = generateRandomString(),
+                    id = "$i",
                     name = generateEpisodeName(),
-                    number = i,
+                    number = i + 1,
                     created = generateRandomCreated(),
                     length = generateRandomLength(),
                     desc = generateRandomString(),
@@ -31,44 +41,33 @@ class MockDataService(val showEpisodeRepository: ShowEpisodeRepository,
                     guests = guests,
                     links = generateLinks(),
                     src = "https://soundcloud.com/podlodka/podlodka-126-osoznannost",
-                    categories = emptyList(),
-                    selections = emptyList()
+                    categoryIds = listOf("${kotlin.math.floor(i.toDouble() / 5).toInt()}"),
+                    selectionIds = listOf("${kotlin.math.floor(i.toDouble() / 5).toInt()}")
             )
-            episodes += episode
             showEpisodeRepository.insert(episode)
         }
 
         val categoryNames = listOf<String>("Мобильная разработка", "Тестирование", "Менеджмент", "Дизайн", "Психология")
         val categoryEmojis = listOf<String>("📱", "🐞", "💼", "🎨", "🧠")
-        for (i in 0..4) {
+        for (i in 0..3) {
             val category = Category(
-                    id = generateRandomString(),
+                    id = "$i",
                     name = categoryNames[i],
                     emoji = categoryEmojis[i],
-                    episodes = emptyList()
-                    //episodes = episodes.slice(5*i..5*i+4)
+                    episodeIds = listOf("${5 * i}", "${5 * i + 1}", "${5 * i + 2}", "${5 * i + 3}", "${5 * i + 4}")
             )
-//            for (episode in episodes.slice(5*i..5*i+4)) {
-//                episode.categories += category
-//            }
-
             categoryRepository.insert(category)
         }
 
         val selectionNames = listOf<String>("Как поднять зарплату", "Как пройти собеседование", "Как подсидеть тимлида", "Как сделать нормальную архитектуру", "Как войти в IT")
         val selectionCovers = listOf<String>("https://images.unsplash.com/photo-1553729459-efe14ef6055d", "https://images.unsplash.com/photo-1549923746-c502d488b3ea", "https://images.unsplash.com/photo-1484981138541-3d074aa97716", "https://images.unsplash.com/photo-1431576901776-e539bd916ba2", "https://images.unsplash.com/photo-1573164713347-df1f7d6aeb03")
-        for (i in 0..4) {
+        for (i in 0..3) {
             val selection = Selection(
-                    id = generateRandomString(),
+                    id = "$i",
                     name = selectionNames[i],
                     imageUrl = selectionCovers[i],
-                    episodes = emptyList()
-                    //episodes = episodes.slice(5*i..5*i+4)
+                    episodeIds = listOf("${5 * i}", "${5 * i + 1}", "${5 * i + 2}", "${5 * i + 3}", "${5 * i + 4}")
             )
-//            for (episode in episodes.slice(5*i..5*i+4)) {
-//                episode.selections += selection
-//            }
-
             selectionRepository.insert(selection)
         }
 

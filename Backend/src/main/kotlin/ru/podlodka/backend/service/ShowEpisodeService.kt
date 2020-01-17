@@ -13,6 +13,15 @@ class ShowEpisodeService(val showEpisodeRepository: ShowEpisodeRepository){
         return showEpisodeRepository.findAll();
     }
 
+    fun getShowEpisodesWithIds(ids: List<String>?): List<ShowEpisode> {
+        val result = mutableListOf<ShowEpisode>()
+        ids?.forEach {
+            val episode = showEpisodeRepository.findById(it).get()
+            result.add(episode)
+        }
+        return result.toList()
+    }
+
     fun getShowEpisodeDetailById(id: String): ShowEpisode? {
         val episode = showEpisodeRepository.findById(id);
         if(!episode.isPresent) {
