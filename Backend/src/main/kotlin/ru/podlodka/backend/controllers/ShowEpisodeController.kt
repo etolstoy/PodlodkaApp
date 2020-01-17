@@ -24,9 +24,8 @@ class ShowEpisodeController(val showEpisodeService: ShowEpisodeService,
         return episodeMap;
     }
 
-
     @GetMapping("/{id}")
-    fun getProductDetail(@PathVariable("id") id: String): ResponseEntity<ShowEpisode> {
+    fun getShowEpisodeDetail(@PathVariable("id") id: String): ResponseEntity<ShowEpisode> {
 
         val episode = showEpisodeService.getShowEpisodeDetailById(id)
         logger.info("episode $episode");

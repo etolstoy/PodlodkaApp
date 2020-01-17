@@ -11,5 +11,5 @@ data class Selection(
         // Ссылка на обложку подборки
         val imageUrl: String,
         // Список выпусков в подборке
-        val episodes: List<ShowEpisode>
+        var episodes: List<ShowEpisode>
 );

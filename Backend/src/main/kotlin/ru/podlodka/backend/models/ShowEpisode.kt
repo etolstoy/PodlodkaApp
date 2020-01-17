@@ -25,7 +25,7 @@ data class ShowEpisode(
         // Основная ссылка с файлом
         val src: String,
         // Список категорий, в которые входит выпуск
-        val categories: List<Category>,
+        var categories: List<Category>,
         // Список подборок, в которые входит выпуск
-        val selections: List<Selection>
+        var selections: List<Selection>
 );

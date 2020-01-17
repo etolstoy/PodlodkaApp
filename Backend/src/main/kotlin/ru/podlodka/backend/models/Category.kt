@@ -11,5 +11,5 @@ data class Category(
         // Emoji этой категории
         val emoji: String,
         // Список выпусков в категории
-        val episodes: List<ShowEpisode>
+        var episodes: List<ShowEpisode>
 );

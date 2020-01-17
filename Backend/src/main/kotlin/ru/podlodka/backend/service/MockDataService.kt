@@ -1,16 +1,22 @@
 package ru.podlodka.backend.service
 
 import org.springframework.stereotype.Service
-import ru.podlodka.backend.models.Link
-import ru.podlodka.backend.models.Person
-import ru.podlodka.backend.models.ShowEpisode
+import ru.podlodka.backend.models.*
+import ru.podlodka.backend.repositories.CategoryRepository
+import ru.podlodka.backend.repositories.SelectionRepository
 import ru.podlodka.backend.repositories.ShowEpisodeRepository
 
 @Service
-class MockDataService(val showEpisodeRepository: ShowEpisodeRepository) {
+class MockDataService(val showEpisodeRepository: ShowEpisodeRepository,
+                      val categoryRepository: CategoryRepository,
+                      val selectionRepository: SelectionRepository) {
     // Генерация семпловых данных
     fun mockData(): String {
         showEpisodeRepository.deleteAll()
+        categoryRepository.deleteAll()
+        selectionRepository.deleteAll()
+
+        val episodes = mutableListOf<ShowEpisode>()
         for (i in 1..20) {
             val guests = listOf<Person>(generatePerson())
 
@@ -18,8 +24,8 @@ class MockDataService(val showEpisodeRepository: ShowEpisodeRepository) {
                     id = generateRandomString(),
                     name = generateEpisodeName(),
                     number = i,
-                    created = 1576571350,
-                    length = 6372,
+                    created = generateRandomCreated(),
+                    length = generateRandomLength(),
                     desc = generateRandomString(),
                     hosts = generateHosts(),
                     guests = guests,
@@ -28,8 +34,42 @@ class MockDataService(val showEpisodeRepository: ShowEpisodeRepository) {
                     categories = emptyList(),
                     selections = emptyList()
             )
+            episodes += episode
             showEpisodeRepository.insert(episode)
         }
+
+        val categoryNames = listOf<String>("Мобильная разработка", "Тестирование", "Менеджмент", "Дизайн", "Психология")
+        val categoryEmojis = listOf<String>("📱", "🐞", "💼", "🎨", "🧠")
+        for (i in 0..4) {
+            val category = Category(
+                    id = generateRandomString(),
+                    name = categoryNames[i],
+                    emoji = categoryEmojis[i],
+                    episodes = episodes.slice(5*i..5*i+4)
+            )
+            for (episode in episodes.slice(5*i..5*i+4)) {
+                episode.categories += category
+            }
+
+            categoryRepository.insert(category)
+        }
+
+        val selectionNames = listOf<String>("Как поднять зарплату", "Как пройти собеседование", "Как подсидеть тимлида", "Как сделать нормальную архитектуру", "Как войти в IT")
+        val selectionCovers = listOf<String>("https://images.unsplash.com/photo-1553729459-efe14ef6055d", "https://images.unsplash.com/photo-1549923746-c502d488b3ea", "https://images.unsplash.com/photo-1484981138541-3d074aa97716", "https://images.unsplash.com/photo-1431576901776-e539bd916ba2", "https://images.unsplash.com/photo-1573164713347-df1f7d6aeb03")
+        for (i in 0..4) {
+            val selection = Selection(
+                    id = generateRandomString(),
+                    name = selectionNames[i],
+                    imageUrl = selectionCovers[i],
+                    episodes = episodes.slice(5*i..5*i+4)
+            )
+            for (episode in episodes.slice(5*i..5*i+4)) {
+                episode.selections += selection
+            }
+
+            selectionRepository.insert(selection)
+        }
+
         return "ok";
     }
 
@@ -87,6 +127,9 @@ class MockDataService(val showEpisodeRepository: ShowEpisodeRepository) {
                     url = "http://bit.ly/2ZuiYm4"
             )
     )
+
+    fun generateRandomLength(): Int = (3000..10000).random()
+    fun generateRandomCreated(): Int = (1556000000..1580100000).random()
 
     fun generateHosts(): List<Person> = listOf<Person>(
             Person(
