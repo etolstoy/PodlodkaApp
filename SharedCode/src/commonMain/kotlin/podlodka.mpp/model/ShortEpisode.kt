@@ -1,12 +1,9 @@
 package podlodka.mpp.model
-
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Person(
-    val id: String,
+data class ShortEpisode (
     val name: String,
-    val bio: String,
-    val company: String,
+    val guestName: String,
     val photoUrl: String
 )

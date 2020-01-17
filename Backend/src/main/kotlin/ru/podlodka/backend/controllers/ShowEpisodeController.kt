@@ -6,9 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
-import ru.podlodka.backend.models.Category
-import ru.podlodka.backend.models.Selection
-import ru.podlodka.backend.models.ShowEpisode
+import ru.podlodka.backend.models.*
 import ru.podlodka.backend.service.CategoryService
 import ru.podlodka.backend.service.MockDataService
 import ru.podlodka.backend.service.SelectionService
@@ -24,7 +22,16 @@ class ShowEpisodeController(val showEpisodeService: ShowEpisodeService,
     val logger = Logger.getLogger(ShowEpisodeController::class.java.canonicalName);
 
     data class EpisodeWrapper(
-            val episode: ShowEpisode,
+            val id: String,
+            val name: String,
+            val number: Int,
+            val created: Int,
+            val length: Int,
+            val desc: String,
+            val hosts: List<Person>,
+            val guests: List<Person>,
+            val links: List<Link>,
+            val src: String,
             val categories: List<ShortCategory>,
             val selections: List<ShortSelection>
     )
@@ -32,13 +39,13 @@ class ShowEpisodeController(val showEpisodeService: ShowEpisodeService,
     data class ShortCategory(
             val name: String?,
             val emoji: String?,
-            val shortEpisodes: List<ShortEpisode>
+            val episodes: List<ShortEpisode>
     )
 
     data class ShortSelection(
             val name: String?,
             val imageUrl: String?,
-            val shortEpisodes: List<ShortEpisode>
+            val episodes: List<ShortEpisode>
     )
 
     data class ShortEpisode(
@@ -54,7 +61,16 @@ class ShowEpisodeController(val showEpisodeService: ShowEpisodeService,
 
         episodeMap["showEpisodes"] = episodes.map {
             EpisodeWrapper(
-                    it,
+                    it.id,
+                    it.name,
+                    it.number,
+                    it.created,
+                    it.length,
+                    it.desc,
+                    it.hosts,
+                    it.guests,
+                    it.links,
+                    it.src,
                     it.categoryIds.map {
                         val category = categoryService.getCategoryById(it)
                         val shortEpisodes = getShortEpisodesWithIds(category?.episodeIds)
