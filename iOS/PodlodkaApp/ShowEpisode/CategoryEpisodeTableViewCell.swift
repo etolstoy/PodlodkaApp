@@ -17,6 +17,8 @@ class CategoryEpisodeTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.photoImageView.clipsToBounds = true
+        self.photoImageView.layer.cornerRadius = 8
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

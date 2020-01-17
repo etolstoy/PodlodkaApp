@@ -39,6 +39,7 @@ class ShowEpisodeViewController: UIViewController, UITableViewDataSource {
         setupContent()
     }
 
+
     func setupContent() {        
         guestImageView.layer.masksToBounds = true
         guestImageView.layer.cornerRadius = self.guestImageView.bounds.width / 2
@@ -73,8 +74,23 @@ class ShowEpisodeViewController: UIViewController, UITableViewDataSource {
         let shortEpisode = categoryEpisodes[indexPath.row]
         cell.episodeNameLabel.text = shortEpisode.name
         cell.guestNameLabel.text = shortEpisode.guestName
+        cell.photoImageView.load(url: URL.init(string: shortEpisode.photoUrl)!)
         
         return cell
     }
 
+}
+
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
 }
