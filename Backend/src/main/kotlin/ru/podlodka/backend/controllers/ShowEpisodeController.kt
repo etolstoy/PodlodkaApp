@@ -7,11 +7,13 @@ import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 import ru.podlodka.backend.models.ShowEpisode
+import ru.podlodka.backend.service.MockDataService
 import ru.podlodka.backend.service.ShowEpisodeService
 import java.util.logging.Logger
 
 @RestController
-class ShowEpisodeController(val showEpisodeService: ShowEpisodeService){
+class ShowEpisodeController(val showEpisodeService: ShowEpisodeService,
+                            val mockDataService: MockDataService){
 
     val logger = Logger.getLogger(ShowEpisodeController::class.java.canonicalName);
 
@@ -39,7 +41,7 @@ class ShowEpisodeController(val showEpisodeService: ShowEpisodeService){
 
     @GetMapping("/mock_data")
     fun mockData(): String {
-        return showEpisodeService.mockData() ;
+        return mockDataService.mockData() ;
     }
 
 }
