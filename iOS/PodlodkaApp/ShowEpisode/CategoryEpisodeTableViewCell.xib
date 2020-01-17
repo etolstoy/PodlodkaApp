@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryEpisodeCell" rowHeight="72" id="KGk-i7-Jjw" customClass="CategoryEpisodeTableViewCell" customModule="PodlodkaApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pjp-O8-PTl">
+                        <rect key="frame" x="16" y="12" width="48" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="48" id="Vt3-n3-typ"/>
+                            <constraint firstAttribute="height" constant="48" id="zF5-Ua-gcL"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zt-wO-q6Q">
+                        <rect key="frame" x="72" y="15" width="111" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="TWr-SH-G9u"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="textBlack"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Guest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4N-ff-XjR">
+                        <rect key="frame" x="72" y="39" width="111" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="9fS-Q7-XdD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="textMediumGray"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="y4N-ff-XjR" secondAttribute="bottom" constant="12" id="A9M-oa-Gaw"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="y4N-ff-XjR" secondAttribute="trailing" constant="20" id="C57-4j-kxm"/>
+                    <constraint firstItem="pjp-O8-PTl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Dhn-s9-AyF"/>
+                    <constraint firstItem="y4N-ff-XjR" firstAttribute="leading" secondItem="pjp-O8-PTl" secondAttribute="trailing" constant="8" id="GxI-hv-gHl"/>
+                    <constraint firstItem="8Zt-wO-q6Q" firstAttribute="leading" secondItem="pjp-O8-PTl" secondAttribute="trailing" constant="8" id="XGB-vR-uVW"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8Zt-wO-q6Q" secondAttribute="trailing" constant="20" id="fGH-yg-G8F"/>
+                    <constraint firstItem="pjp-O8-PTl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="lgL-oj-MVN"/>
+                    <constraint firstItem="8Zt-wO-q6Q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="mc8-rz-Hw7"/>
+                    <constraint firstAttribute="bottom" secondItem="pjp-O8-PTl" secondAttribute="bottom" constant="12" id="tEJ-EL-zav"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="episodeNameLabel" destination="8Zt-wO-q6Q" id="wMP-N1-VEJ"/>
+                <outlet property="guestNameLabel" destination="y4N-ff-XjR" id="JVN-S2-bpp"/>
+                <outlet property="photoImageView" destination="pjp-O8-PTl" id="mUH-HQ-C8K"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="94"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="textBlack">
+            <color red="0.16078431372549021" green="0.16862745098039217" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textMediumGray">
+            <color red="0.59215686274509804" green="0.62745098039215685" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

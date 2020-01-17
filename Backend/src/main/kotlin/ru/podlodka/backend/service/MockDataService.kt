@@ -36,7 +36,7 @@ class MockDataService(val showEpisodeRepository: ShowEpisodeRepository,
                     number = i + 1,
                     created = generateRandomCreated(),
                     length = generateRandomLength(),
-                    desc = generateRandomString(),
+                    desc = generateRandomDesc(),
                     hosts = generateHosts(),
                     guests = guests,
                     links = generateLinks(),
@@ -82,6 +82,10 @@ class MockDataService(val showEpisodeRepository: ShowEpisodeRepository,
                 generateCompany(),
                 generatePhoto()
         )
+    }
+
+    fun generateRandomDesc(): String {
+        return "\"Как заработать деньги?\" – это первый и основной вопрос, которым мы задаемся, когда говорим о финансах. А следующее, о чем стоит задуматься – как сохранить и приумножить заработанное. Тема очень обширная, а опций настолько много, что очень легко запутаться и принять неправильное решение. Для того, чтобы разобраться в разнообразии вариантов работы со своим капиталом, мы позвали в гости Павла Комаровского – частного инвестора и автора блога \"RationalAnswer\"."
     }
 
     private fun generatePhoto(): String {

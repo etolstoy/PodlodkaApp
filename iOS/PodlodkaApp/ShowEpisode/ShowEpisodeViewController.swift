@@ -9,17 +9,22 @@
 import UIKit
 import SharedCode
 
-class ShowEpisodeViewController: UIViewController {
+class ShowEpisodeViewController: UIViewController, UITableViewDataSource {
     
     var episode: Episode
+    var categoryEpisodes: Array<ShortEpisode>
     
     @IBOutlet weak var guestImageView: UIImageView!
     @IBOutlet weak var episodeNameLabel: UILabel!
     @IBOutlet weak var guestNameLabel: UILabel!
     @IBOutlet weak var episodeDescriptionLabel: UILabel!
+    @IBOutlet weak var categoryView: UIView!
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var categoryEpisodesTableView: UITableView!
     
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?, episode: Episode) {
         self.episode = episode
+        self.categoryEpisodes = episode.categories.first?.episodes ?? []
         
         super.init(nibName:"ShowEpisodeViewController", bundle:nil)
     }
@@ -44,7 +49,32 @@ class ShowEpisodeViewController: UIViewController {
         episodeNameLabel.text = episode.name
         guestNameLabel.text = episode.guests?.first?.name
         
-        episodeDescriptionLabel.text = episode.desc 
+        episodeDescriptionLabel.text = episode.desc
+        
+        categoryView.layer.masksToBounds = true
+        categoryView.layer.cornerRadius = 8.0
+        
+        let categoryName = "\(episode.categories.first!.emoji) \(episode.categories.first!.name)"
+        
+        categoryLabel.text = categoryName
+        categoryEpisodesTableView.dataSource = self
+        
+        let nib = UINib.init(nibName: "CategoryEpisodeTableViewCell", bundle: nil)
+        categoryEpisodesTableView.register(nib, forCellReuseIdentifier: "categoryEpisodeCell")
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return categoryEpisodes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = categoryEpisodesTableView.dequeueReusableCell(withIdentifier: "categoryEpisodeCell", for: indexPath) as! CategoryEpisodeTableViewCell
+        
+        let shortEpisode = categoryEpisodes[indexPath.row]
+        cell.episodeNameLabel.text = shortEpisode.name
+        cell.guestNameLabel.text = shortEpisode.guestName
+        
+        return cell
     }
 
 }
