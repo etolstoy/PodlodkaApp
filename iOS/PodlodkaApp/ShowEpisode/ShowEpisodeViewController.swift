@@ -43,7 +43,6 @@ class ShowEpisodeViewController: UIViewController, UITableViewDataSource {
         setupContent()
     }
 
-
     func setupContent() {        
         guestImageView.layer.masksToBounds = true
         guestImageView.layer.cornerRadius = self.guestImageView.bounds.width / 2
@@ -94,21 +93,8 @@ class ShowEpisodeViewController: UIViewController, UITableViewDataSource {
         let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
         present(ac, animated: true)
     }
+    
     @IBAction func didTapTranscriptButton(_ sender: Any) {
         // to be implemented
-    }
-}
-
-extension UIImageView {
-    func load(url: URL) {
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
-                }
-            }
-        }
     }
 }
