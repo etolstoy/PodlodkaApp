@@ -11,5 +11,7 @@ data class Person(
         // Биография
         val bio: String,
         // Компания
-        val company: String
+        val company: String,
+        // Фото
+        val photoUrl: String
 );

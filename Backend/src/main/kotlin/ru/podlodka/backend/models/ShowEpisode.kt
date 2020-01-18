@@ -10,8 +10,12 @@ data class ShowEpisode(
         val name: String,
         // Номер выпуска
         val number: Int,
+        // Дата выпуска
+        val created: Int,
+        // Длина выпуска
+        val length: Int,
          // Описание выпуска
-        val description: String,
+        val desc: String,
         // Ведущие, которые были в выпуске
         val hosts: List<Person>,
         // Гости выпуска
@@ -19,5 +23,9 @@ data class ShowEpisode(
         // Ссылки на подкаст на разных площадках
         val links: List<Link>,
         // Основная ссылка с файлом
-        val src: String
-);
+        val src: String,
+        // Список категорий, в которые входит выпуск
+        var categoryIds: List<String>,
+        // Список подборок, в которые входит выпуск
+        var selectionIds: List<String>
+)
