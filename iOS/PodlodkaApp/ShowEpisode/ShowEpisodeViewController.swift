@@ -94,6 +94,9 @@ class ShowEpisodeViewController: UIViewController, UITableViewDataSource {
         let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
         present(ac, animated: true)
     }
+    @IBAction func didTapTranscriptButton(_ sender: Any) {
+        // to be implemented
+    }
 }
 
 extension UIImageView {
