@@ -32,7 +32,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XiM-0y-Skp">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="811.5"/>
                             <subviews>
                                 <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AII-WQ-PKs">
                                     <rect key="frame" x="185.5" y="83" width="43" height="4"/>
@@ -71,7 +71,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yvg-LM-8C9">
-                                    <rect key="frame" x="20" y="435" width="374" height="461"/>
+                                    <rect key="frame" x="20" y="435" width="374" height="376.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWb-TY-Ox8">
                                             <rect key="frame" x="17" y="25" width="337" height="29"/>
@@ -82,8 +82,8 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="374" placeholderIntrinsicHeight="302.5" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z5v-fV-k87" customClass="SelfSizingTableView" customModule="PodlodkaApp" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="74" width="374" height="387"/>
+                                        <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="374" placeholderIntrinsicHeight="302.5" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="72" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z5v-fV-k87" customClass="SelfSizingTableView" customModule="PodlodkaApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="74" width="374" height="302.5"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         </tableView>
                                     </subviews>
@@ -99,7 +99,7 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="7Fp-5n-LZ0" firstAttribute="leading" secondItem="XiM-0y-Skp" secondAttribute="leading" constant="25" id="03g-aQ-bcY"/>
                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="H5L-hP-H9d" secondAttribute="trailing" constant="15" id="0tW-f8-9HH"/>
@@ -108,7 +108,6 @@
                                 <constraint firstItem="utD-rF-PaV" firstAttribute="centerX" secondItem="XiM-0y-Skp" secondAttribute="centerX" id="Cv2-MF-EvU"/>
                                 <constraint firstItem="fB1-A1-knX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XiM-0y-Skp" secondAttribute="leading" constant="15" id="E29-Rz-eiy"/>
                                 <constraint firstItem="utD-rF-PaV" firstAttribute="top" secondItem="AII-WQ-PKs" secondAttribute="bottom" constant="28" id="Luq-2m-686"/>
-                                <constraint firstAttribute="height" constant="896" id="QSv-78-PyG"/>
                                 <constraint firstItem="yvg-LM-8C9" firstAttribute="top" secondItem="7Fp-5n-LZ0" secondAttribute="bottom" constant="39.5" id="Vwp-tX-RG9"/>
                                 <constraint firstItem="H5L-hP-H9d" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XiM-0y-Skp" secondAttribute="leading" constant="15" id="Wcc-qL-yih"/>
                                 <constraint firstItem="7Fp-5n-LZ0" firstAttribute="top" secondItem="H5L-hP-H9d" secondAttribute="bottom" constant="40" id="YS9-q0-dbF"/>
@@ -125,10 +124,9 @@
                         </view>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="XiM-0y-Skp" firstAttribute="centerX" secondItem="WpN-Sl-MYq" secondAttribute="centerX" id="1wu-bc-ZVh"/>
                         <constraint firstAttribute="bottom" secondItem="XiM-0y-Skp" secondAttribute="bottom" id="TMF-6u-hTR"/>
                         <constraint firstAttribute="trailing" secondItem="XiM-0y-Skp" secondAttribute="trailing" id="W1g-SF-rds"/>
-                        <constraint firstItem="XiM-0y-Skp" firstAttribute="centerY" secondItem="WpN-Sl-MYq" secondAttribute="centerY" id="Ywj-DN-1ls"/>
+                        <constraint firstItem="XiM-0y-Skp" firstAttribute="width" secondItem="WpN-Sl-MYq" secondAttribute="width" id="dTe-fv-JNf"/>
                         <constraint firstItem="XiM-0y-Skp" firstAttribute="leading" secondItem="WpN-Sl-MYq" secondAttribute="leading" id="gMJ-Sw-dda"/>
                         <constraint firstItem="XiM-0y-Skp" firstAttribute="top" secondItem="WpN-Sl-MYq" secondAttribute="top" id="kwT-Vv-QnB"/>
                     </constraints>

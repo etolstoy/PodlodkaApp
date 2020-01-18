@@ -41,9 +41,6 @@ class ShowEpisodeViewController: UIViewController, UITableViewDataSource {
         setupContent()
     }
 
-    override func viewDidLayoutSubviews() {
-//        scrollView.
-    }
 
     func setupContent() {        
         guestImageView.layer.masksToBounds = true
