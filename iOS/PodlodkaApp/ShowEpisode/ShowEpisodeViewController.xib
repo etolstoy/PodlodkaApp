@@ -33,7 +33,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XiM-0y-Skp">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="811.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="911.5"/>
                             <subviews>
                                 <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AII-WQ-PKs">
                                     <rect key="frame" x="185.5" y="83" width="43" height="4"/>
@@ -115,7 +115,7 @@
                                 <constraint firstItem="fB1-A1-knX" firstAttribute="top" secondItem="utD-rF-PaV" secondAttribute="bottom" constant="28" id="buG-j6-Vcw"/>
                                 <constraint firstItem="yvg-LM-8C9" firstAttribute="leading" secondItem="XiM-0y-Skp" secondAttribute="leading" constant="20" id="fHw-jA-uRc"/>
                                 <constraint firstItem="AII-WQ-PKs" firstAttribute="top" secondItem="XiM-0y-Skp" secondAttribute="top" constant="83" id="hne-Sl-I6e"/>
-                                <constraint firstAttribute="bottom" secondItem="yvg-LM-8C9" secondAttribute="bottom" id="k9v-3u-EOR"/>
+                                <constraint firstAttribute="bottom" secondItem="yvg-LM-8C9" secondAttribute="bottom" constant="100" id="k9v-3u-EOR"/>
                                 <constraint firstItem="fB1-A1-knX" firstAttribute="centerX" secondItem="XiM-0y-Skp" secondAttribute="centerX" id="nzb-jk-BoN"/>
                                 <constraint firstAttribute="trailing" secondItem="7Fp-5n-LZ0" secondAttribute="trailing" constant="25" id="ojH-dL-lw2"/>
                                 <constraint firstItem="AII-WQ-PKs" firstAttribute="centerX" secondItem="XiM-0y-Skp" secondAttribute="centerX" id="qTv-U5-tSf"/>
@@ -143,21 +143,21 @@
                             <color key="backgroundColor" name="textBlack"/>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vmj-zG-POD" userLabel="Play Button">
-                            <rect key="frame" x="10" y="-15" width="90" height="90"/>
+                            <rect key="frame" x="10" y="7.5" width="45" height="45"/>
                             <state key="normal" image="play-icon"/>
                             <connections>
                                 <action selector="didTapPlayButton:" destination="-1" eventType="touchUpInside" id="QIg-D8-Kls"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ic-77-dqT" userLabel="Share Button">
-                            <rect key="frame" x="239" y="9" width="32" height="42"/>
+                            <rect key="frame" x="255" y="19" width="16" height="22"/>
                             <state key="normal" image="share-icon"/>
                             <connections>
                                 <action selector="didTapShareButton:" destination="-1" eventType="touchUpInside" id="MOu-gX-FRL"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bop-4b-vfa" userLabel="Transcript Button">
-                            <rect key="frame" x="151" y="15" width="38" height="30"/>
+                            <rect key="frame" x="186" y="19" width="19" height="22"/>
                             <state key="normal" image="transcript-icon"/>
                             <connections>
                                 <action selector="didTapTranscriptButton:" destination="-1" eventType="touchUpInside" id="DaL-nN-1P3"/>
