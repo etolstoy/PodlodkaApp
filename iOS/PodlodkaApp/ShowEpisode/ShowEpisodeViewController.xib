@@ -20,6 +20,7 @@
                 <outlet property="guestImageView" destination="utD-rF-PaV" id="OBh-qM-E5M"/>
                 <outlet property="guestNameLabel" destination="H5L-hP-H9d" id="kT4-6r-p5q"/>
                 <outlet property="scrollView" destination="WpN-Sl-MYq" id="hHM-KO-ILe"/>
+                <outlet property="toolbarView" destination="EwE-Q4-yN5" id="xxb-YD-8eZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -133,10 +134,22 @@
                     <viewLayoutGuide key="contentLayoutGuide" id="eAm-v2-B8p"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="jIe-jX-X7A"/>
                 </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EwE-Q4-yN5" customClass="EpisodeToolbarView" customModule="PodlodkaApp" customModuleProvider="target">
+                    <rect key="frame" x="54" y="781" width="306" height="60"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="306" id="87D-0a-FbU"/>
+                        <constraint firstAttribute="height" constant="60" id="k8b-ZK-PYL"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" name="lightGray"/>
             <constraints>
+                <constraint firstItem="EwE-Q4-yN5" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="AcR-vS-att"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="WpN-Sl-MYq" secondAttribute="top" constant="44" id="G2O-QO-qdk"/>
+                <constraint firstItem="EwE-Q4-yN5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="OaJ-RI-1Ck"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EwE-Q4-yN5" secondAttribute="trailing" constant="30" id="Y5U-Qp-tPJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="EwE-Q4-yN5" secondAttribute="bottom" constant="21" id="afS-zL-jcf"/>
                 <constraint firstItem="WpN-Sl-MYq" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="34" id="dhe-jg-Qov"/>
                 <constraint firstItem="WpN-Sl-MYq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="t3N-H5-AQu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WpN-Sl-MYq" secondAttribute="trailing" id="zaw-yS-R3v"/>

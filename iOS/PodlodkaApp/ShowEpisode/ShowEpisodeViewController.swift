@@ -23,6 +23,7 @@ class ShowEpisodeViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var categoryView: UIView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var categoryEpisodesTableView: UITableView!
+    @IBOutlet weak var toolbarView: EpisodeToolbarView!
     
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?, episode: Episode) {
         self.episode = episode

@@ -14,6 +14,7 @@
 		3CCF1B6723D1EE2500EDB7D9 /* SelfSizingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF1B6623D1EE2500EDB7D9 /* SelfSizingTableView.swift */; };
 		3CCF1B6A23D1F5C400EDB7D9 /* CategoryEpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF1B6823D1F5C400EDB7D9 /* CategoryEpisodeTableViewCell.swift */; };
 		3CCF1B6B23D1F5C400EDB7D9 /* CategoryEpisodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CCF1B6923D1F5C400EDB7D9 /* CategoryEpisodeTableViewCell.xib */; };
+		3CCF1B7123D3391500EDB7D9 /* EpisodeToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF1B7023D3391500EDB7D9 /* EpisodeToolbarView.swift */; };
 		F744EB65231814AD0031E374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F744EB64231814AD0031E374 /* AppDelegate.swift */; };
 		F744EB67231814AD0031E374 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F744EB66231814AD0031E374 /* ViewController.swift */; };
 		F744EB6A231814AD0031E374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F744EB68231814AD0031E374 /* Main.storyboard */; };
@@ -64,6 +65,7 @@
 		3CCF1B6623D1EE2500EDB7D9 /* SelfSizingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingTableView.swift; sourceTree = "<group>"; };
 		3CCF1B6823D1F5C400EDB7D9 /* CategoryEpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		3CCF1B6923D1F5C400EDB7D9 /* CategoryEpisodeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryEpisodeTableViewCell.xib; sourceTree = "<group>"; };
+		3CCF1B7023D3391500EDB7D9 /* EpisodeToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeToolbarView.swift; sourceTree = "<group>"; };
 		F744EB61231814AD0031E374 /* PodlodkaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PodlodkaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F744EB64231814AD0031E374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F744EB66231814AD0031E374 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				3CCF1B6623D1EE2500EDB7D9 /* SelfSizingTableView.swift */,
 				3CCF1B6823D1F5C400EDB7D9 /* CategoryEpisodeTableViewCell.swift */,
 				3CCF1B6923D1F5C400EDB7D9 /* CategoryEpisodeTableViewCell.xib */,
+				3CCF1B7023D3391500EDB7D9 /* EpisodeToolbarView.swift */,
 			);
 			path = ShowEpisode;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				F744EB65231814AD0031E374 /* AppDelegate.swift in Sources */,
 				3CCF1B6023CDAA3A00EDB7D9 /* ShowEpisodeViewController.swift in Sources */,
 				3CCF1B6A23D1F5C400EDB7D9 /* CategoryEpisodeTableViewCell.swift in Sources */,
+				3CCF1B7123D3391500EDB7D9 /* EpisodeToolbarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
