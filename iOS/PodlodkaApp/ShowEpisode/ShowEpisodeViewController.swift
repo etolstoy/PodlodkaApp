@@ -14,6 +14,8 @@ class ShowEpisodeViewController: UIViewController, UITableViewDataSource {
     var episode: Episode
     var categoryEpisodes: Array<ShortEpisode>
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var guestImageView: UIImageView!
     @IBOutlet weak var episodeNameLabel: UILabel!
     @IBOutlet weak var guestNameLabel: UILabel!
@@ -39,6 +41,9 @@ class ShowEpisodeViewController: UIViewController, UITableViewDataSource {
         setupContent()
     }
 
+    override func viewDidLayoutSubviews() {
+//        scrollView.
+    }
 
     func setupContent() {        
         guestImageView.layer.masksToBounds = true
@@ -50,7 +55,7 @@ class ShowEpisodeViewController: UIViewController, UITableViewDataSource {
         episodeNameLabel.text = episode.name
         guestNameLabel.text = episode.guests?.first?.name
         
-        episodeDescriptionLabel.text = episode.desc + episode.desc
+        episodeDescriptionLabel.text = episode.desc
         
         categoryView.layer.masksToBounds = true
         categoryView.layer.cornerRadius = 8.0
@@ -65,6 +70,7 @@ class ShowEpisodeViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        scrollView.setNeedsLayout()
         return categoryEpisodes.count
     }
     

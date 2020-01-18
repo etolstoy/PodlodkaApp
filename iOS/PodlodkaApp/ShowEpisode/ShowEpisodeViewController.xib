@@ -14,10 +14,12 @@
                 <outlet property="categoryEpisodesTableView" destination="z5v-fV-k87" id="ysk-wT-RPO"/>
                 <outlet property="categoryLabel" destination="SWb-TY-Ox8" id="2Hl-3i-wbW"/>
                 <outlet property="categoryView" destination="yvg-LM-8C9" id="Aan-YC-Eu6"/>
+                <outlet property="contentView" destination="XiM-0y-Skp" id="hLv-MS-34H"/>
                 <outlet property="episodeDescriptionLabel" destination="7Fp-5n-LZ0" id="VjR-x0-fAd"/>
                 <outlet property="episodeNameLabel" destination="fB1-A1-knX" id="iVh-dY-9Qg"/>
                 <outlet property="guestImageView" destination="utD-rF-PaV" id="OBh-qM-E5M"/>
                 <outlet property="guestNameLabel" destination="H5L-hP-H9d" id="kT4-6r-p5q"/>
+                <outlet property="scrollView" destination="WpN-Sl-MYq" id="hHM-KO-ILe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -69,7 +71,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yvg-LM-8C9">
-                                    <rect key="frame" x="20" y="435" width="374" height="376.5"/>
+                                    <rect key="frame" x="20" y="435" width="374" height="461"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWb-TY-Ox8">
                                             <rect key="frame" x="17" y="25" width="337" height="29"/>
@@ -81,7 +83,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="374" placeholderIntrinsicHeight="302.5" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z5v-fV-k87" customClass="SelfSizingTableView" customModule="PodlodkaApp" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="74" width="374" height="302.5"/>
+                                            <rect key="frame" x="0.0" y="74" width="374" height="387"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         </tableView>
                                     </subviews>
@@ -106,17 +108,18 @@
                                 <constraint firstItem="utD-rF-PaV" firstAttribute="centerX" secondItem="XiM-0y-Skp" secondAttribute="centerX" id="Cv2-MF-EvU"/>
                                 <constraint firstItem="fB1-A1-knX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XiM-0y-Skp" secondAttribute="leading" constant="15" id="E29-Rz-eiy"/>
                                 <constraint firstItem="utD-rF-PaV" firstAttribute="top" secondItem="AII-WQ-PKs" secondAttribute="bottom" constant="28" id="Luq-2m-686"/>
+                                <constraint firstAttribute="height" constant="896" id="QSv-78-PyG"/>
                                 <constraint firstItem="yvg-LM-8C9" firstAttribute="top" secondItem="7Fp-5n-LZ0" secondAttribute="bottom" constant="39.5" id="Vwp-tX-RG9"/>
                                 <constraint firstItem="H5L-hP-H9d" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XiM-0y-Skp" secondAttribute="leading" constant="15" id="Wcc-qL-yih"/>
                                 <constraint firstItem="7Fp-5n-LZ0" firstAttribute="top" secondItem="H5L-hP-H9d" secondAttribute="bottom" constant="40" id="YS9-q0-dbF"/>
                                 <constraint firstItem="fB1-A1-knX" firstAttribute="top" secondItem="utD-rF-PaV" secondAttribute="bottom" constant="28" id="buG-j6-Vcw"/>
                                 <constraint firstItem="yvg-LM-8C9" firstAttribute="leading" secondItem="XiM-0y-Skp" secondAttribute="leading" constant="20" id="fHw-jA-uRc"/>
                                 <constraint firstItem="AII-WQ-PKs" firstAttribute="top" secondItem="XiM-0y-Skp" secondAttribute="top" constant="83" id="hne-Sl-I6e"/>
+                                <constraint firstAttribute="bottom" secondItem="yvg-LM-8C9" secondAttribute="bottom" id="k9v-3u-EOR"/>
                                 <constraint firstItem="fB1-A1-knX" firstAttribute="centerX" secondItem="XiM-0y-Skp" secondAttribute="centerX" id="nzb-jk-BoN"/>
                                 <constraint firstAttribute="trailing" secondItem="7Fp-5n-LZ0" secondAttribute="trailing" constant="25" id="ojH-dL-lw2"/>
                                 <constraint firstItem="AII-WQ-PKs" firstAttribute="centerX" secondItem="XiM-0y-Skp" secondAttribute="centerX" id="qTv-U5-tSf"/>
                                 <constraint firstAttribute="trailing" secondItem="yvg-LM-8C9" secondAttribute="trailing" constant="20" id="qtw-Mg-rUH"/>
-                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="yvg-LM-8C9" secondAttribute="bottom" constant="80" id="rXf-tZ-okf"/>
                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fB1-A1-knX" secondAttribute="trailing" constant="15" id="uSD-5w-I4b"/>
                             </constraints>
                         </view>
