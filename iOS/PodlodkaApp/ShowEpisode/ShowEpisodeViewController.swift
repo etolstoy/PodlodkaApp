@@ -8,6 +8,7 @@
 
 import UIKit
 import SharedCode
+import SafariServices
 
 class ShowEpisodeViewController: UIViewController, UITableViewDataSource {
     
@@ -23,6 +24,7 @@ class ShowEpisodeViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var categoryView: UIView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var categoryEpisodesTableView: UITableView!
+    @IBOutlet weak var toolbarView: EpisodeToolbarView!
     
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?, episode: Episode) {
         self.episode = episode
@@ -82,6 +84,19 @@ class ShowEpisodeViewController: UIViewController, UITableViewDataSource {
         return cell
     }
 
+    @IBAction func didTapPlayButton(_ sender: Any) {
+        let safari = SFSafariViewController(url: URL(string: episode.src)!)
+        present(safari, animated: true)
+    }
+    
+    @IBAction func didTapShareButton(_ sender: Any) {
+        let items = [URL(string: episode.src)!]
+        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        present(ac, animated: true)
+    }
+    @IBAction func didTapTranscriptButton(_ sender: Any) {
+        // to be implemented
+    }
 }
 
 extension UIImageView {

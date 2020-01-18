@@ -20,6 +20,7 @@
                 <outlet property="guestImageView" destination="utD-rF-PaV" id="OBh-qM-E5M"/>
                 <outlet property="guestNameLabel" destination="H5L-hP-H9d" id="kT4-6r-p5q"/>
                 <outlet property="scrollView" destination="WpN-Sl-MYq" id="hHM-KO-ILe"/>
+                <outlet property="toolbarView" destination="EwE-Q4-yN5" id="xxb-YD-8eZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -133,10 +134,56 @@
                     <viewLayoutGuide key="contentLayoutGuide" id="eAm-v2-B8p"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="jIe-jX-X7A"/>
                 </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EwE-Q4-yN5" customClass="EpisodeToolbarView" customModule="PodlodkaApp" customModuleProvider="target">
+                    <rect key="frame" x="54" y="781" width="306" height="60"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rdZ-nq-pqf">
+                            <rect key="frame" x="24" y="22" width="18" height="18"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="textBlack"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vmj-zG-POD" userLabel="Play Button">
+                            <rect key="frame" x="10" y="7.5" width="45" height="45"/>
+                            <state key="normal" image="play-icon"/>
+                            <connections>
+                                <action selector="didTapPlayButton:" destination="-1" eventType="touchUpInside" id="QIg-D8-Kls"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ic-77-dqT" userLabel="Share Button">
+                            <rect key="frame" x="255" y="19" width="16" height="22"/>
+                            <state key="normal" image="share-icon"/>
+                            <connections>
+                                <action selector="didTapShareButton:" destination="-1" eventType="touchUpInside" id="MOu-gX-FRL"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bop-4b-vfa" userLabel="Transcript Button">
+                            <rect key="frame" x="186" y="19" width="19" height="22"/>
+                            <state key="normal" image="transcript-icon"/>
+                            <connections>
+                                <action selector="didTapTranscriptButton:" destination="-1" eventType="touchUpInside" id="DaL-nN-1P3"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="306" id="87D-0a-FbU"/>
+                        <constraint firstItem="Vmj-zG-POD" firstAttribute="leading" secondItem="EwE-Q4-yN5" secondAttribute="leading" constant="10" id="8YS-KE-aVO"/>
+                        <constraint firstItem="Bop-4b-vfa" firstAttribute="centerY" secondItem="EwE-Q4-yN5" secondAttribute="centerY" id="Hdb-1B-1Nq"/>
+                        <constraint firstAttribute="trailing" secondItem="3Ic-77-dqT" secondAttribute="trailing" constant="35" id="I1V-RC-ihV"/>
+                        <constraint firstItem="Vmj-zG-POD" firstAttribute="centerY" secondItem="EwE-Q4-yN5" secondAttribute="centerY" id="Ii4-ZD-Lel"/>
+                        <constraint firstItem="3Ic-77-dqT" firstAttribute="leading" secondItem="Bop-4b-vfa" secondAttribute="trailing" constant="50" id="jqt-mn-Pa3"/>
+                        <constraint firstAttribute="height" constant="60" id="k8b-ZK-PYL"/>
+                        <constraint firstItem="3Ic-77-dqT" firstAttribute="centerY" secondItem="EwE-Q4-yN5" secondAttribute="centerY" id="psn-Fc-EJf"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" name="lightGray"/>
             <constraints>
+                <constraint firstItem="EwE-Q4-yN5" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="AcR-vS-att"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="WpN-Sl-MYq" secondAttribute="top" constant="44" id="G2O-QO-qdk"/>
+                <constraint firstItem="EwE-Q4-yN5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="OaJ-RI-1Ck"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EwE-Q4-yN5" secondAttribute="trailing" constant="30" id="Y5U-Qp-tPJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="EwE-Q4-yN5" secondAttribute="bottom" constant="21" id="afS-zL-jcf"/>
                 <constraint firstItem="WpN-Sl-MYq" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="34" id="dhe-jg-Qov"/>
                 <constraint firstItem="WpN-Sl-MYq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="t3N-H5-AQu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WpN-Sl-MYq" secondAttribute="trailing" id="zaw-yS-R3v"/>
@@ -147,6 +194,9 @@
     </objects>
     <resources>
         <image name="aksenov" width="302" height="302"/>
+        <image name="play-icon" width="45" height="45"/>
+        <image name="share-icon" width="16" height="21"/>
+        <image name="transcript-icon" width="19" height="15"/>
         <namedColor name="lightGray">
             <color red="0.95294117647058818" green="0.96470588235294119" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
