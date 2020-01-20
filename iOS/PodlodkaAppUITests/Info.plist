@@ -16,6 +16,21 @@
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>51.158.182.28</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<string></string>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<string></string>
+			</dict>
+		</dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 </dict>

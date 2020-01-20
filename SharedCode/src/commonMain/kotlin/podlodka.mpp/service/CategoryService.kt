@@ -9,16 +9,15 @@ import kotlinx.serialization.json.Json
 import kotlinx.serialization.map
 import podlodka.mpp.model.Episode
 
-class EpisodeService {
-    fun episodes(callback: (List<Episode>?) -> Unit) {
-
+class CategoryService {
+    fun getCategories(callback: (List<Episode>?) -> Unit) {
         GlobalScope.apply {
             launch(ApplicationDispatcher) {
-                val response = NetworkClient.get("episode")
+                val response = NetworkClient.get("category")
                 val serializer: KSerializer<List<Episode>> = ArrayListSerializer(Episode.serializer())
                 val result = Json.parse((StringSerializer to serializer).map, response)
 
-                callback(result["showEpisodes"])
+                callback(result["categories"])
             }
         }
     }

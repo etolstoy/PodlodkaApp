@@ -25,22 +25,23 @@ kotlin {
 
     sourceSets["commonMain"].dependencies {
         implementation("org.jetbrains.kotlin:kotlin-stdlib-common")
-        implementation("io.ktor:ktor-client-core:1.3.0-beta-1")
-        implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:0.13.0")
+        implementation("io.ktor:ktor-client-core:1.3.0")
+        implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:0.14.0")
     }
 
     sourceSets["androidMain"].dependencies {
         implementation("org.jetbrains.kotlin:kotlin-stdlib")
-        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.1")
-        implementation("io.ktor:ktor-client-android:1.3.0-beta-1")
-        implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.13.0")
+        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.3")
+        implementation("io.ktor:ktor-client-android:1.3.0")
+        implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.14.0")
     }
 
     sourceSets["iosMain"].dependencies {
-        implementation("io.ktor:ktor-client-ios:1.3.0-beta-1")
-        implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:0.13.0")
+        implementation("io.ktor:ktor-client-ios:1.3.0")
+        implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:0.14.0")
     }
 }
+
 
 val packForXcode by tasks.creating(Sync::class) {
     val targetDir = File(buildDir, "xcode-frameworks")

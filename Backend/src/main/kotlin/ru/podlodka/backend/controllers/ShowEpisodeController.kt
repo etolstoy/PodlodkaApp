@@ -13,7 +13,10 @@ import ru.podlodka.backend.service.SelectionService
 import ru.podlodka.backend.service.ShowEpisodeService
 import java.util.logging.Logger
 
+const val EPISODE_PATH = "/episode"
+
 @RestController
+@RequestMapping(value = [EPISODE_PATH])
 class ShowEpisodeController(val showEpisodeService: ShowEpisodeService,
                             val mockDataService: MockDataService,
                             val categoryService: CategoryService,
