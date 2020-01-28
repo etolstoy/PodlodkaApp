@@ -19,6 +19,8 @@ class CategorySquareCollectionViewCell: UICollectionViewCell {
         
         roundView.clipsToBounds = true
         roundView.layer.cornerRadius = roundView.frame.size.width / 2
+        
+        self.layer.cornerRadius = 10
     }
 
 }
