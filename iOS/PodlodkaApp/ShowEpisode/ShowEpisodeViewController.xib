@@ -13,7 +13,6 @@
             <connections>
                 <outlet property="categoryEpisodesTableView" destination="z5v-fV-k87" id="ysk-wT-RPO"/>
                 <outlet property="categoryLabel" destination="SWb-TY-Ox8" id="2Hl-3i-wbW"/>
-                <outlet property="categoryListView" destination="ecV-9b-tWd" id="uUi-6M-rXi"/>
                 <outlet property="categoryView" destination="yvg-LM-8C9" id="Aan-YC-Eu6"/>
                 <outlet property="contentView" destination="XiM-0y-Skp" id="hLv-MS-34H"/>
                 <outlet property="episodeDescriptionLabel" destination="7Fp-5n-LZ0" id="VjR-x0-fAd"/>
@@ -34,7 +33,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XiM-0y-Skp">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1137.5"/>
                             <subviews>
                                 <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AII-WQ-PKs">
                                     <rect key="frame" x="185.5" y="83" width="43" height="4"/>
@@ -101,24 +100,28 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecV-9b-tWd" customClass="CategoryListView" customModule="PodlodkaApp" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="850" width="414" height="150"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <rect key="frame" x="20" y="852.5" width="374" height="185"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="185" id="cLK-5n-eGv"/>
+                                    </constraints>
                                 </view>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="7Fp-5n-LZ0" firstAttribute="leading" secondItem="XiM-0y-Skp" secondAttribute="leading" constant="25" id="03g-aQ-bcY"/>
                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="H5L-hP-H9d" secondAttribute="trailing" constant="15" id="0tW-f8-9HH"/>
-                                <constraint firstItem="ecV-9b-tWd" firstAttribute="leading" secondItem="XiM-0y-Skp" secondAttribute="leading" id="1b9-CX-vOZ"/>
                                 <constraint firstItem="H5L-hP-H9d" firstAttribute="centerX" secondItem="XiM-0y-Skp" secondAttribute="centerX" id="1hE-or-D87"/>
                                 <constraint firstItem="H5L-hP-H9d" firstAttribute="top" secondItem="fB1-A1-knX" secondAttribute="bottom" constant="12" id="4L6-ox-Yda"/>
                                 <constraint firstItem="utD-rF-PaV" firstAttribute="centerX" secondItem="XiM-0y-Skp" secondAttribute="centerX" id="Cv2-MF-EvU"/>
                                 <constraint firstItem="fB1-A1-knX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XiM-0y-Skp" secondAttribute="leading" constant="15" id="E29-Rz-eiy"/>
-                                <constraint firstItem="ecV-9b-tWd" firstAttribute="top" secondItem="yvg-LM-8C9" secondAttribute="bottom" constant="38.5" id="Jmf-MP-zo4"/>
                                 <constraint firstItem="utD-rF-PaV" firstAttribute="top" secondItem="AII-WQ-PKs" secondAttribute="bottom" constant="28" id="Luq-2m-686"/>
-                                <constraint firstItem="ecV-9b-tWd" firstAttribute="centerX" secondItem="yvg-LM-8C9" secondAttribute="centerX" id="P8L-Wq-nYk"/>
+                                <constraint firstItem="ecV-9b-tWd" firstAttribute="top" secondItem="yvg-LM-8C9" secondAttribute="bottom" constant="41" id="Q3l-Br-AQN"/>
+                                <constraint firstAttribute="trailing" secondItem="ecV-9b-tWd" secondAttribute="trailing" constant="20" id="TEh-6i-IbE"/>
+                                <constraint firstAttribute="bottom" secondItem="ecV-9b-tWd" secondAttribute="bottom" constant="100" id="VhI-Xa-cMK"/>
                                 <constraint firstItem="yvg-LM-8C9" firstAttribute="top" secondItem="7Fp-5n-LZ0" secondAttribute="bottom" constant="39.5" id="Vwp-tX-RG9"/>
                                 <constraint firstItem="H5L-hP-H9d" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XiM-0y-Skp" secondAttribute="leading" constant="15" id="Wcc-qL-yih"/>
+                                <constraint firstItem="ecV-9b-tWd" firstAttribute="leading" secondItem="XiM-0y-Skp" secondAttribute="leading" constant="20" id="Wjd-li-Stf"/>
                                 <constraint firstItem="7Fp-5n-LZ0" firstAttribute="top" secondItem="H5L-hP-H9d" secondAttribute="bottom" constant="40" id="YS9-q0-dbF"/>
                                 <constraint firstItem="fB1-A1-knX" firstAttribute="top" secondItem="utD-rF-PaV" secondAttribute="bottom" constant="28" id="buG-j6-Vcw"/>
                                 <constraint firstItem="yvg-LM-8C9" firstAttribute="leading" secondItem="XiM-0y-Skp" secondAttribute="leading" constant="20" id="fHw-jA-uRc"/>
@@ -127,9 +130,7 @@
                                 <constraint firstAttribute="trailing" secondItem="7Fp-5n-LZ0" secondAttribute="trailing" constant="25" id="ojH-dL-lw2"/>
                                 <constraint firstItem="AII-WQ-PKs" firstAttribute="centerX" secondItem="XiM-0y-Skp" secondAttribute="centerX" id="qTv-U5-tSf"/>
                                 <constraint firstAttribute="trailing" secondItem="yvg-LM-8C9" secondAttribute="trailing" constant="20" id="qtw-Mg-rUH"/>
-                                <constraint firstAttribute="height" constant="1100" id="tv1-kb-BHz"/>
                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fB1-A1-knX" secondAttribute="trailing" constant="15" id="uSD-5w-I4b"/>
-                                <constraint firstAttribute="bottom" secondItem="ecV-9b-tWd" secondAttribute="bottom" constant="100" id="uTb-Ne-6vD"/>
                             </constraints>
                         </view>
                     </subviews>

@@ -21,6 +21,7 @@ class CategoryListView: UIView {
 
         guard let view = loadViewFromNib() else { return }
         view.frame = self.bounds
+        view.backgroundColor = UIColor.clear
         self.addSubview(view)
         contentView = view
     }
@@ -29,9 +30,5 @@ class CategoryListView: UIView {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: nibName, bundle: bundle)
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
-    }
-    
-    func setup() {
-        label.text = "13123123"
     }
 }

@@ -74,7 +74,7 @@ class ShowEpisodeViewController: UIViewController, UITableViewDataSource {
         let nib = UINib.init(nibName: "CategoryEpisodeTableViewCell", bundle: nil)
         categoryEpisodesTableView.register(nib, forCellReuseIdentifier: "categoryEpisodeCell")
     
-        categoryListView.setup()
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
