@@ -46,6 +46,9 @@ class ShowEpisodeViewController: UIViewController, UITableViewDataSource {
         let viewModel = EpisodeDetailViewModel.init()
         viewModel.getCategories { array in
             self.categories = array
+            self.categoryListView.categories = array
+            
+            self.categoryListView.setupView()
         }
 
         setupContent()
@@ -73,8 +76,6 @@ class ShowEpisodeViewController: UIViewController, UITableViewDataSource {
         
         let nib = UINib.init(nibName: "CategoryEpisodeTableViewCell", bundle: nil)
         categoryEpisodesTableView.register(nib, forCellReuseIdentifier: "categoryEpisodeCell")
-    
-
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

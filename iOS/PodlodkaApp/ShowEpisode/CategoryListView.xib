@@ -8,24 +8,49 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryListView" customModule="PodlodkaApp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryListView" customModule="PodlodkaApp" customModuleProvider="target">
+            <connections>
+                <outlet property="categoryCollectionView" destination="JPA-6h-qw9" id="7u7-ET-fov"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="185"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🔀 Другие категории" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLa-KJ-nTF">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🔀 Другие категории" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLa-KJ-nTF">
                     <rect key="frame" x="0.0" y="0.0" width="188" height="22"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="188" id="Y9w-E9-4YR"/>
+                        <constraint firstAttribute="height" constant="22" id="yal-Wf-ECF"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="JPA-6h-qw9">
+                    <rect key="frame" x="0.0" y="40" width="414" height="145"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hDq-kO-tE2">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="JPA-6h-qw9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="48T-7w-Cdh"/>
+                <constraint firstItem="JPA-6h-qw9" firstAttribute="top" secondItem="OLa-KJ-nTF" secondAttribute="bottom" constant="18" id="CeS-5V-Wvz"/>
+                <constraint firstItem="OLa-KJ-nTF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="S15-cU-MgQ"/>
+                <constraint firstItem="OLa-KJ-nTF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="SVP-pk-IwS"/>
+                <constraint firstItem="JPA-6h-qw9" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="b5m-mO-L73"/>
+                <constraint firstItem="JPA-6h-qw9" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="bDk-kI-gsx"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="139" y="117"/>
+            <point key="canvasLocation" x="137.68115942028987" y="116.85267857142857"/>
         </view>
     </objects>
 </document>
