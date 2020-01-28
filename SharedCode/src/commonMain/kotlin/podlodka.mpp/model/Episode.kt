@@ -14,6 +14,6 @@ data class Episode(
     val src: String,
     val created: Int,
     val length: Int,
-    val categories: List<Category>,
+    val categories: List<ShortCategory>,
     val selections: List<Selection>
 )

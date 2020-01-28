@@ -3,7 +3,7 @@ package podlodka.mpp.model
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Category(
+data class ShortCategory(
     val name: String,
     val emoji: String,
     val episodes: List<ShortEpisode>

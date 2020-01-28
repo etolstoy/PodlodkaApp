@@ -13,6 +13,7 @@ import SafariServices
 class ShowEpisodeViewController: UIViewController, UITableViewDataSource {
     
     var episode: Episode
+    var categories: Array<EpisodeCategory>
     var categoryEpisodes: Array<ShortEpisode>
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -28,6 +29,7 @@ class ShowEpisodeViewController: UIViewController, UITableViewDataSource {
     
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?, episode: Episode) {
         self.episode = episode
+        self.categories = []
         self.categoryEpisodes = episode.categories.first?.episodes ?? []
         
         super.init(nibName:"ShowEpisodeViewController", bundle:nil)
@@ -39,6 +41,11 @@ class ShowEpisodeViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let viewModel = EpisodeDetailViewModel.init()
+        viewModel.getCategories { array in
+            self.categories = array
+        }
 
         setupContent()
     }
