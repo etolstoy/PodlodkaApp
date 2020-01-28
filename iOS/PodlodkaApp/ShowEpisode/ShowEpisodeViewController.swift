@@ -26,6 +26,7 @@ class ShowEpisodeViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var categoryEpisodesTableView: UITableView!
     @IBOutlet weak var toolbarView: EpisodeToolbarView!
+    @IBOutlet weak var categoryListView: CategoryListView!
     
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?, episode: Episode) {
         self.episode = episode
@@ -72,6 +73,8 @@ class ShowEpisodeViewController: UIViewController, UITableViewDataSource {
         
         let nib = UINib.init(nibName: "CategoryEpisodeTableViewCell", bundle: nil)
         categoryEpisodesTableView.register(nib, forCellReuseIdentifier: "categoryEpisodeCell")
+    
+        categoryListView.setup()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
