@@ -3,20 +3,19 @@ buildscript {
     repositories {
         google()
         jcenter()
-        
+        mavenCentral()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
+        classpath 'com.squareup.sqldelight:gradle-plugin:1.2.2'
     }
-
 }
 
 allprojects {
     repositories {
         google()
         jcenter()
-        
     }
 }

@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 plugins {
     kotlin("multiplatform")
     id("org.jetbrains.kotlin.plugin.serialization")
+    id("com.squareup.sqldelight")
 }
 
 kotlin {
@@ -42,6 +43,13 @@ kotlin {
     }
 }
 
+sqldelight {
+    database("PodlodkaDatabase") {
+        packageName = "podlodka.db"
+        sourceFolders = listOf("sql")
+        schemaOutputDirectory = file("src/main/sqldelight/databases")
+    }
+}
 
 val packForXcode by tasks.creating(Sync::class) {
     val targetDir = File(buildDir, "xcode-frameworks")

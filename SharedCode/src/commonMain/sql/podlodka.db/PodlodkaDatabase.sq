@@ -1,0 +1,14 @@
+CREATE TABLE EpisodeCategory (
+  id TEXT NOT NULL,
+  name TEXT NOT NULL,
+  emoji TEXT NOT NULL
+);
+
+insertItem:
+INSERT OR REPLACE INTO EpisodeCategory(id, name, emoji)VALUES(?,?,?);
+
+selectAll:
+SELECT * FROM EpisodeCategory;
+
+selectById:
+SELECT * FROM EpisodeCategory WHERE id = ?;
