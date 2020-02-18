@@ -12,6 +12,12 @@ class EpisodeDetailViewModel {
 
         service.getCategories {
             if (it != null) {
+                helper.insertEpisodeCategories(it)
+            }
+            val query = helper.selectAllItems()
+            val arr = query.executeAsList()
+            print(arr)
+            if (it != null) {
                 callback(it)
             }
         }

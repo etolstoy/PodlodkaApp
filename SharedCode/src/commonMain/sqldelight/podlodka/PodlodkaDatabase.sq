@@ -1,14 +1,14 @@
-CREATE TABLE EpisodeCategory (
+CREATE TABLE SqlEpisodeCategory (
   id TEXT NOT NULL,
   name TEXT NOT NULL,
   emoji TEXT NOT NULL
 );
 
-insertItem:
-INSERT OR REPLACE INTO EpisodeCategory(id, name, emoji)VALUES(?,?,?);
+insertEpisodeCategory:
+INSERT OR REPLACE INTO SqlEpisodeCategory(id, name, emoji)VALUES(?,?,?);
 
 selectAll:
-SELECT * FROM EpisodeCategory;
+SELECT * FROM SqlEpisodeCategory;
 
 selectById:
-SELECT * FROM EpisodeCategory WHERE id = ?;
+SELECT * FROM SqlEpisodeCategory WHERE id = ?;

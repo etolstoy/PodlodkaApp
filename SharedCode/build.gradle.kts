@@ -36,7 +36,7 @@ kotlin {
         implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.3")
         implementation("io.ktor:ktor-client-android:1.3.0")
         implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.14.0")
-        implementation("com.squareup.sqldelight:sqlite-driver:1.2.2")
+        implementation("com.squareup.sqldelight:android-driver:1.2.2")
     }
 
     sourceSets["iosMain"].dependencies {
