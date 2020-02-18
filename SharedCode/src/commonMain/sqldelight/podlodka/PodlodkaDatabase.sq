@@ -1,11 +1,12 @@
 CREATE TABLE SqlEpisodeCategory (
-  id TEXT NOT NULL,
+  id TEXT NOT NULL PRIMARY KEY,
   name TEXT NOT NULL,
-  emoji TEXT NOT NULL
+  emoji TEXT NOT NULL,
+  episodeIds TEXT NOT NULL
 );
 
 insertEpisodeCategory:
-INSERT OR REPLACE INTO SqlEpisodeCategory(id, name, emoji)VALUES(?,?,?);
+INSERT OR REPLACE INTO SqlEpisodeCategory(id, name, emoji, episodeIds)VALUES(?,?,?,?);
 
 selectAll:
 SELECT * FROM SqlEpisodeCategory;
