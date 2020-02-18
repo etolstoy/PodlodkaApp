@@ -28,6 +28,7 @@ kotlin {
         implementation("org.jetbrains.kotlin:kotlin-stdlib-common")
         implementation("io.ktor:ktor-client-core:1.3.0")
         implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:0.14.0")
+        implementation("com.squareup.sqldelight:runtime")
     }
 
     sourceSets["androidMain"].dependencies {
@@ -35,19 +36,19 @@ kotlin {
         implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.3")
         implementation("io.ktor:ktor-client-android:1.3.0")
         implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.14.0")
+        implementation("com.squareup.sqldelight:sqlite-driver:1.2.2")
     }
 
     sourceSets["iosMain"].dependencies {
         implementation("io.ktor:ktor-client-ios:1.3.0")
         implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:0.14.0")
+        implementation("com.squareup.sqldelight:native-driver:1.2.2")
     }
 }
 
 sqldelight {
     database("PodlodkaDatabase") {
         packageName = "podlodka.db"
-        sourceFolders = listOf("sql")
-        schemaOutputDirectory = file("src/main/sqldelight/databases")
     }
 }
 
